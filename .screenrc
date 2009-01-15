@@ -1,0 +1,3 @@
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%?%-Lw%?%{.rW}%n*%f %t%?(%u)%?%{-}%?%+Lw%? %=%{..G}%H%=%{..Y} %D %d/%M/%Y %C:%s%a "
