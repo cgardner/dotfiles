@@ -2,3 +2,4 @@ hardstatus on
 hardstatus alwayslastline
 hardstatus string "%{.b}%?%-Lw%?%{.r}%n*%f %t%?(%u)%?%{-}%?%+Lw%? %=%{..G}%H%=%{..Y} %D %d/%M/%Y %C:%s%a "
 defscrollback 10000
+maptimeout 5
