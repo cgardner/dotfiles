@@ -10,7 +10,7 @@ alias dropbox="cd ~/Dropbox"
 alias workspace="cd ~/Dropbox/Workspace"
 alias src="cd ~/Dropbox/src"
 alias zf="~/Dropbox/src/ZendFramework/bin/zf.sh"
-alias php="/Applications/MAMP/bin/php5.3/bin/php"
+alias svnst="svn st"
 
 # Count Files in a given Directory
 cf() {
