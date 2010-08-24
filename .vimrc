@@ -7,6 +7,7 @@ filetype plugin on
 set term=color_xterm
 set nowrap
 set number
+set shiftwidth=4
 
 autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
