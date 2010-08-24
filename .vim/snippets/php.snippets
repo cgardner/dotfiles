@@ -1,7 +1,6 @@
 snippet php
 	<?php
 	${1}
-	?>
 snippet ec
 	echo "${1:string}"${2};
 snippet inc
@@ -98,18 +97,6 @@ snippet doc_s
 	 * @author ${6:`g:snips_author`}
 	 **/
 	${1}function ${2}(${3});${7}
-# custom Function
-snippet docf
-	/**
-	 * ${4:undocumented function}
-	 *
-	 * @param ${5:void}
-	 * @return ${6:void}
-	 * @author ${7:`g:snips_author`}
-	 **/
-	${1}function ${2}(${3}) {
-		${8}
-	} // end function ${2}
 # Function
 snippet doc_f
 	/**
