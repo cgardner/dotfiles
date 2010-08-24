@@ -1,8 +1,8 @@
-if [ -z "$STY" ]; then
+if [[ -z "$STY" && $TERM == 'xterm' ]]; then
 	screen -dRR
 fi
 
-export PATH="$PATH:~/Dropbox/src/android/tools"
+export PATH="/usr/local/sbin:$PATH:~/Dropbox/src/android/tools"
 
 export EDITOR="mate -w"
 
@@ -10,7 +10,7 @@ alias dropbox="cd ~/Dropbox"
 alias workspace="cd ~/Dropbox/Workspace"
 alias src="cd ~/Dropbox/src"
 alias zf="~/Dropbox/src/ZendFramework/bin/zf.sh"
-alias php="/Applications/MAMP/bin/php5.3/bin/php"
+alias svnst="svn st"
 
 # Count Files in a given Directory
 cf() {
