@@ -2,7 +2,7 @@ if [[ -z "$STY" && $TERM == 'xterm' ]]; then
 	screen -dRR
 fi
 
-export PATH="$PATH:~/Dropbox/src/android/tools"
+export PATH="/usr/local/sbin:$PATH:~/Dropbox/src/android/tools"
 
 export EDITOR="mate -w"
 
