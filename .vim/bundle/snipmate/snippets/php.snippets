@@ -1,6 +1,7 @@
 snippet php
 	<?php
 	${1}
+	?>
 snippet ec
 	echo "${1:string}"${2};
 snippet inc
@@ -102,12 +103,11 @@ snippet doc_f
 	/**
 	 * ${4:undocumented function}
 	 *
-	 * @param ${5:void}
-	 * @return ${6:void}
-	 * @author ${7:`g:snips_author`}
+	 * @return ${5:void}
+	 * @author ${6:`g:snips_author`}
 	 **/
 	${1}function ${2}(${3})
-	{${8}
+	{${7}
 	}
 # Header
 snippet doc_h
@@ -131,8 +131,8 @@ snippet doc_i
 	 * @package ${3:default}
 	 * @author ${4:`g:snips_author`}
 	 **/
-	interface ${1:} {
-	${5}
+	interface ${1:}
+	{${5}
 	} // END interface $1
 # class ...
 snippet class

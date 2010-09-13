@@ -45,3 +45,15 @@ autocmd FileType php noremap <C-U> :w!<CR>:!/usr/local/bin/phpunit %<CR>
 
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
+
+let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
+let NERDTreeIgnore=[ '\.git$' ]
+let NerdTreeShowBookmarks=1
+let NerdTreeShowFiles=1
+let NerdTreeShowHidden=1
+let NerdTreeQuitOnOpen=1
+let NerdTreeHighlightCursorline=1
+let NerdTreeMouseMode=2
+nmap ,n :NERDTreeClose<CR>:NERDTreeToggle<CR>
+nmap ,N :NERDTreeClose<CR>
+nmap ,m :NERDTreeClose<CR>:NERDTreeFind<CR>
