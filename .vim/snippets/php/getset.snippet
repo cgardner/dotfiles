@@ -11,13 +11,14 @@ ${1:private} $${2:variable};
  * @param void
  * @return $4
  * @author ${5:`g:snips_author`}
+ * @date ${6:`strftime('%Y-%m-%d')`}
  **/
-${6:private} function get${7:Variable}() {
+${7:private} function get${8:Variable}() {
 	if (is_null($this->$2)) {
-		$this->set$7(${8:FALSE});
+		$this->set$8(${9:FALSE});
 	}
 	return $this->$2;
-} // end function get$7()
+} // end function get$8()
 
 /**
  * Setter for $this->$2
@@ -25,8 +26,9 @@ ${6:private} function get${7:Variable}() {
  * @param $4
  * @return void
  * @author $5
+ * @date $6
  **/
-$6 function set$7($arg0) {
+$7 function set$8($arg0) {
 	$this->$2 = $arg0;
-} // end function set$7()
+} // end function set$8()
 ${9}
