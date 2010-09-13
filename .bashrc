@@ -1,4 +1,4 @@
-if [[ -z "$STY" && $TERM == 'xterm' ]]; then
+if [[ -z "$STY" && $TERM =~ 'xterm' ]]; then
 	screen -dRR
 fi
 
