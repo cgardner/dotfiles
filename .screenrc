@@ -5,9 +5,7 @@ hardstatus alwayslastline
 
 # # allow bold colors - necessary for some reason
 attrcolor b ".I"
-#hardstatus string "%{.b}%?%-Lw%?%{.r}%n*%f %t%?(%u)%?%{-}%?%+Lw%? %=%{..G}%H%=%{..Y} %D %d/%M/%Y %C:%s%a "
-#caption always "%{Yb} %D %Y-%02m-%02d %0c %{k}|%{G} %l %{k}|%{W} %-w%{+b}%n %t%{-b}%+w"
-hardstatus string "%{Yb}%?%-Lw%?%{.r}%n*%f%t%?(%u)%?%{-}%?%+Lw%?%=%{..G}%H%=%{..Y} %D %d/%M/%Y %C:%s%a "
+hardstatus string "%{Yb}%?%-Lw%?%{.r}%n*%f %t%?(%u)%?%{-}%?%+Lw%? %=%{..G}%H%=%{..Y} %D %d/%M/%Y %C:%s%a "
 defscrollback 10000
 maptimeout 5
 
