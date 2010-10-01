@@ -3,10 +3,11 @@ set nocompatible " This must be first.  it changes other options
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+let mapleader=","
+
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-let mapleader=","
 
 set backspace=indent,eol,start
 set hidden
@@ -41,7 +42,7 @@ let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
 
 autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
-autocmd FileType php noremap <C-U> :w!<CR>:!/usr/local/bin/phpunit %<CR>
+autocmd FileType php noremap <C-U> :w!<CR>:!/opt/adp/httpd/bin/phpunit --group vim %<CR>
 
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>

@@ -1,5 +1,5 @@
 if [[ -z "$STY" && $TERM =~ 'xterm' ]]; then
-	screen -dRR
+	screen -dRR -S "Craig's Development" -p 1
 fi
 
 export PATH="/usr/local/sbin:$PATH:~/Dropbox/src/android/tools"
