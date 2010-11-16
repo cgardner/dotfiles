@@ -13,5 +13,11 @@ defbce "on"
 
 startup_message off
 
-screen -t console 1
-screen -t development 0 vim
+screen -t log 10 tail -f /var/www/logs/webcredit.log
+screen -t trace 11 tail -f /var/www/logs/webcredit.trace
+screen -t fsdlinux1 20 ssh gardnerc@139.126.6.194
+screen -t preQA 30 ssh gardnerc@DSADPCDEVWEB2POREH.plaza.ds.adp.com:
+
+screen -t console 2
+screen -t 3.5 1 vim
+screen -t 4.0 0 vim
