@@ -1,6 +1,0 @@
-[submodule "bundle/phpcomplete/autoload"]
-	path = bundle/phpcomplete/autoload
-	url = https://github.com/shawncplus/phpcomplete.vim.git
-[submodule ".vim/bundle/phpcomplete/autoload"]
-	path = .vim/bundle/phpcomplete/autoload
-	url = https://github.com/shawncplus/phpcomplete.vim.git
