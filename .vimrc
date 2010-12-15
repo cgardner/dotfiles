@@ -8,7 +8,6 @@ let mapleader=","
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-
 set backspace=indent,eol,start
 set hidden
 set expandtab
@@ -39,8 +38,8 @@ syntax on
 filetype on
 filetype plugin on
 filetype indent on
-let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
 
+let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
 let g:vimwiki_list = [{'path': '~/public_html/vimwiki/', 'auto_export': 1}]
 
 autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
@@ -49,6 +48,8 @@ autocmd FileType php noremap <C-U> :w!<CR>:!/opt/adp/httpd/bin/phpunit --group v
 
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
+
+map <Leader>vh :VimwikiAll2HTML<CR>
 
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
 let NERDTreeIgnore=[ '\.git$' ]
