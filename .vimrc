@@ -33,6 +33,8 @@ set undolevels=1000
 set wildignore=*.swp,*.bak
 set title
 
+set ofu=syntaxcomplete#Complete
+
 syntax on
 filetype on
 filetype plugin on
