@@ -40,7 +40,6 @@ filetype plugin on
 filetype indent on
 
 let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
-let g:vimwiki_list = [{'path': '~/public_html/vimwiki/', 'auto_export': 1}]
 
 autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
@@ -49,7 +48,13 @@ autocmd FileType php noremap <C-U> :w!<CR>:!/opt/adp/httpd/bin/phpunit --group v
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
 
+" VimWIKI settings
+let g:vimwiki_list = [{'path': '~/public_html/vimwiki/', 'auto_export': 1}]
+let g:vimwiki_table_auto_fmt = 0
 map <Leader>vh :VimwikiAll2HTML<CR>
+inoremap <expr> <buffer> <CR> vimwiki_tbl#kbd_cr()
+inoremap <expr> <buffer> <C-Tab> vimwiki_tbl#kbd_tab()
+inoremap <expr> <buffer> <S-Tab> vimwiki_tbl#kbd_shift_tab()
 
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
 let NERDTreeIgnore=[ '\.git$' ]
