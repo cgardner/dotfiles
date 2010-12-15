@@ -41,6 +41,8 @@ filetype plugin on
 filetype indent on
 let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
 
+let g:vimwiki_list = [{'path': '~/public_html/vimwiki/', 'auto_export': 1}]
+
 autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
 autocmd FileType php noremap <C-U> :w!<CR>:!/opt/adp/httpd/bin/phpunit --group vim %<CR>
