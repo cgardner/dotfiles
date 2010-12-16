@@ -39,14 +39,16 @@ filetype on
 filetype plugin on
 filetype indent on
 
-let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
-
 autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
 autocmd FileType php noremap <C-U> :w!<CR>:!/opt/adp/httpd/bin/phpunit --group vim %<CR>
 
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
+
+" SnipMate Settings
+let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
+map <Leader>rr :call ReloadAllSnippets()<CR>
 
 " VimWIKI settings
 let g:vimwiki_list = [{'path': '~/public_html/vimwiki/', 'auto_export': 1}]
