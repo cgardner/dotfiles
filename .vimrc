@@ -33,11 +33,14 @@ set undolevels=1000
 set wildignore=*.swp,*.bak
 set title
 
+color slate
+
 syntax on
 filetype on
 filetype plugin on
 filetype indent on
-let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
+let g:snips_author='Craig Gardner <craig.s.gardner@gmail.com>'
+map <Leader>rr :call ReloadAllSnippets()<CR>
 
 autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
