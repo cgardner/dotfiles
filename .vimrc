@@ -8,7 +8,6 @@ let mapleader=","
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-
 set backspace=indent,eol,start
 set hidden
 set expandtab
@@ -32,6 +31,7 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak
 set title
+set ofu=syntaxcomplete#Complete
 
 color slate
 
@@ -48,6 +48,18 @@ autocmd FileType php noremap <C-U> :w!<CR>:!/opt/adp/httpd/bin/phpunit --group v
 
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
+
+" SnipMate Settings
+let g:snips_author='Craig Gardner <craig_gardner@adp.com>'
+map <Leader>rr :call ReloadAllSnippets()<CR>
+
+" VimWIKI settings
+let g:vimwiki_list = [{'path': '~/public_html/vimwiki/', 'auto_export': 1}]
+let g:vimwiki_table_auto_fmt = 0
+map <Leader>vh :VimwikiAll2HTML<CR>
+inoremap <expr> <buffer> <CR> vimwiki_tbl#kbd_cr()
+inoremap <expr> <buffer> <C-Tab> vimwiki_tbl#kbd_tab()
+inoremap <expr> <buffer> <S-Tab> vimwiki_tbl#kbd_shift_tab()
 
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
 let NERDTreeIgnore=[ '\.git$' ]

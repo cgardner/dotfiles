@@ -1,5 +1,5 @@
 if [[ -z "$STY" && $TERM =~ 'xterm' ]]; then
-	screen -dRR -S "Development" -p 1
+	screen -DRR -S "Development" -p 1
 fi
 
 alias svnst="svn st"
