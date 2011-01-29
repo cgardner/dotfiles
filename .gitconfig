@@ -2,7 +2,10 @@
     st = status
     b = branch
     ci = commit
+    co = checkout
 
 [user]
 	name = Craig Gardner
 	email = craig.s.gardner@gmail.com
+[color]
+	ui = auto
