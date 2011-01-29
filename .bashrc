@@ -1,15 +1,7 @@
 if [[ -z "$STY" && $TERM =~ 'xterm' ]]; then
-	screen -dRR -S "Craig's Development" -p 1
+	screen -dRR -S "Development" -p 1
 fi
 
-export PATH="/usr/local/sbin:$PATH:~/Dropbox/src/android/tools"
-
-export EDITOR="mate -w"
-
-alias dropbox="cd ~/Dropbox"
-alias workspace="cd ~/Dropbox/Workspace"
-alias src="cd ~/Dropbox/src"
-alias zf="~/Dropbox/src/ZendFramework/bin/zf.sh"
 alias svnst="svn st"
 
 # Count Files in a given Directory

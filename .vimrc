@@ -16,7 +16,7 @@ set tabstop=4
 set autoindent
 set smartindent
 set smarttab
-set term=color_xterm
+set term=xterm
 set number
 set shiftwidth=4
 set pastetoggle=<F8>
