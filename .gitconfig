@@ -1,0 +1,8 @@
+[alias]
+    st = status
+    b = branch
+    ci = commit
+
+[user]
+	name = Craig Gardner
+	email = craig.s.gardner@gmail.com
