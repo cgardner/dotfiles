@@ -1,3 +1,5 @@
 *.swp
 .vim/.netrwhist
 .vim/bundle/snipmate/doc/tags
+.pentadactyl/info/default/*
+.vim/NERDTreeBookmarks

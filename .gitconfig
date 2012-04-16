@@ -1,11 +1,19 @@
-[alias]
-    st = status
-    b = branch
-    ci = commit
-    co = checkout
-
 [user]
 	name = Craig Gardner
-	email = craig.s.gardner@gmail.com
+	mail = craig@seabourneinc.com
+	email = craig@seabourneinc.com
+[alias]
+	co = checkout 
+	mrg = merge --no-ff
+	ci = commit
+	b = branch
+	ffc = flow feature checkout
+	fff = flow feature finish
+# Found these from https://github.com/gabebw/dotfiles/blob/master/gitconfig.erb
+	st = status -sb
+	lol = log --graph --all --pretty=format:'%Cred%h%Creset %Cblue%an%Creset: %s -%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [color]
 	ui = auto
+[core]
+	excludesfile = /Users/cgardner/.gitignore
+	quotepath = false

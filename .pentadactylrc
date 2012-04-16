@@ -1,0 +1,6 @@
+set mapleader=","
+
+set passkeys=mail.google.com:jk<CR>,gi,feedly.com:jkde<CR>,gi,docs.google.com:<BS><CR>,gi,google.com/reader:jk<CR>,gi
+colorscheme ubuntu
+
+map <Leader>c ggf16<CR>

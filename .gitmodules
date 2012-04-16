@@ -1,0 +1,39 @@
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/vim-addon-mw-utils"]
+	path = .vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/tlib"]
+	path = .vim/bundle/tlib
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/phpfolding"]
+	path = .vim/bundle/phpfolding
+	url = https://github.com/vim-scripts/phpfolding.vim.git
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = git://github.com/vim-scripts/vimwiki.git
+[submodule ".vim/snippets"]
+	path = .vim/snippets
+	url = git://github.com/cgardner/snipmate-snippets.git
+[submodule ".vim/bundle/tabname"]
+	path = .vim/bundle/tabname
+	url = git://github.com/vim-scripts/Tab-Name.git
+[submodule ".pentadactyl/colors/ubuntu"]
+	path = .pentadactyl/colors/ubuntu
+	url = git://github.com/cgardner/colorscheme-ubuntu.git
+[submodule ".vim/bundle/powerline"]
+	path = .vim/bundle/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
