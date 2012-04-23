@@ -15,5 +15,5 @@
 [color]
 	ui = auto
 [core]
-	excludesfile = /Users/cgardner/.gitignore
+	excludesfile = ~/.gitignore
 	quotepath = false
