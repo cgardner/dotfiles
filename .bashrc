@@ -2,10 +2,6 @@ export EDITOR="vim"
 export PATH="/usr/local/sbin:$PATH:~/Dropbox/src/android/tools"
 export WORKING_DIR="/home/cgardner/src"
 
-fcc() {
-	tm fcc
-}
-
 tm() {
 	which tmux 2> /dev/null
 	if [ $? != 0 ]; then
@@ -18,13 +14,14 @@ tm() {
 	if [ $? != 0 ]; then
 		tmux -2 new-session -d -s $SESSION
 
-		tmux set-window-option -t $SESSION -g automatic-rename off
-		tmux new-window -t $SESSION:0 -k -n vim 'vim'
-
 		PROJECT_DIR="$WORKING_DIR/$SESSION/repo"
 		if [ -d "$PROJECT_DIR" ]; then
 			tmux set-option default-path $PROJECT_DIR
 		fi
+
+		tmux set-window-option -t $SESSION -g automatic-rename off
+		tmux new-window -t $SESSION:0 -k -n vim 'vim'
+
 		tmux split-window -h -p 25 -t $SESSION:0
 		tmux split-window -d -t $SESSION:0 'tail -f /var/log/apache2/error.log'
 
