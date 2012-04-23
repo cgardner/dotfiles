@@ -39,7 +39,6 @@ filetype indent on
 
 autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
-autocmd FileType php noremap <C-U> :w!<CR>:!/opt/adp/httpd/bin/phpunit --group vim %<CR>
 
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
@@ -48,13 +47,6 @@ nmap <silent> ,/ :let @/=""<CR>
 let g:snips_author='Craig Gardner <craig.s.gardner@gmail.com>'
 map <Leader>rr :call ReloadAllSnippets()<CR>
 
-" VimWIKI settings
-let g:vimwiki_list = [{'path': '~/public_html/vimwiki/', 'auto_export': 1}]
-let g:vimwiki_table_auto_fmt = 0
-map <Leader>vh :VimwikiAll2HTML<CR>
-inoremap <expr> <buffer> <CR> vimwiki_tbl#kbd_cr()
-inoremap <expr> <buffer> <C-Tab> vimwiki_tbl#kbd_tab()
-inoremap <expr> <buffer> <S-Tab> vimwiki_tbl#kbd_shift_tab()
 
 " NERDTree Settings
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
@@ -71,6 +63,16 @@ nmap <Leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
 if has("autocmd")
 	" PHP Settings
 	autocmd FileType php noremap <C-L> :!/usr/bin/php -l %<CR>
+
+  " Drupal *.module and *.install files.
+  augroup module
+    autocmd BufRead,BufNewFile *.module set filetype=php
+    autocmd BufRead,BufNewFile *.install set filetype=php
+    autocmd BufRead,BufNewFile *.test set filetype=php
+    autocmd BufRead,BufNewFile *.inc set filetype=php
+    autocmd BufRead,BufNewFile *.profile set filetype=php
+    autocmd BufRead,BufNewFile *.view set filetype=php
+  augroup END
 endif
 syntax on
 
@@ -105,3 +107,16 @@ endif
 noremap <silent><Leader>/ :nohls<CR>
 noremap <F1> <Esc>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+function! JavaScriptFold() 
+    setl foldmethod=syntax
+    setl foldlevelstart=1
+    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+
+    function! FoldText()
+        return substitute(getline(v:foldstart), '{.*', '{...}', '')
+    endfunction
+    setl foldtext=FoldText()
+endfunction
+au FileType javascript call JavaScriptFold()
+au FileType javascript setl fen
