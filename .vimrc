@@ -29,9 +29,11 @@ set wildignore=*.swp,*.bak
 set title
 set ofu=syntaxcomplete#Complete
 
-color slate
 set t_Co=256
+let g:solarized_termcolors=256
 set laststatus=2
+colorscheme slate
+set background=dark
 
 filetype on
 filetype plugin on
@@ -74,7 +76,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.view set filetype=php
   augroup END
 endif
-syntax on
+syntax enable
 
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
@@ -98,10 +100,6 @@ if has('gui_running')
 
 	set lines=40                    " Height
 	set columns=85                  " Width
-
-	colorscheme nucolors
-else
-	colorscheme slate
 endif
 
 noremap <silent><Leader>/ :nohls<CR>

@@ -1,6 +1,6 @@
 export EDITOR="vim"
-export PATH="/usr/local/sbin:$PATH:~/Dropbox/src/android/tools"
-export WORKING_DIR="/home/cgardner/src"
+export PATH="$PATH:~/bin"
+export WORKING_DIR="$HOME/src"
 
 tm() {
 	which tmux 2> /dev/null
