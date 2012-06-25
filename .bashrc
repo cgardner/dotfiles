@@ -177,7 +177,7 @@ update_prompt() {
     set_svn_rev
     set_virtual_env_base
     
-    PS1="\[\033[G\]${M}[${HOSTNAME} ${NEW_PWD}${M}] ${GIT_BRANCH}${SVN_REV}${VIRTUAL_ENV_BASE}${C}\$ ${NONE}"
+    PS1="\[\033[G\]${M}[${HOSTNAME} ${NEW_PWD}${M}] ${GIT_BRANCH}${SVN_REV}${VIRTUAL_ENV_BASE}${C}\r\n\$ ${NONE}"
 }
 
 PROMPT_COMMAND=update_prompt
