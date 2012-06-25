@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/php"]
 	path = .vim/bundle/php
 	url = https://github.com/shawncplus/php.vim.git
+[submodule ".vim/bundle/zencoding"]
+	path = .vim/bundle/zencoding
+	url = git://github.com/mattn/zencoding-vim.git
