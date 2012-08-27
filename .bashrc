@@ -23,7 +23,7 @@ tm() {
 		tmux new-window -t $SESSION:0 -k -n vim 'vim'
 
 		tmux split-window -h -p 25 -t $SESSION:0
-		tmux split-window -d -t $SESSION:0 'tail -f /var/log/apache2/error.log'
+		tmux split-window -d -t $SESSION:0 'tail -f /var/log/apache2/error_log'
 
 		tmux select-pane -t 0
 	fi
