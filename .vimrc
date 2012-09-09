@@ -29,6 +29,9 @@ set wildignore=*.swp,*.bak
 set title
 set ofu=syntaxcomplete#Complete
 
+set guifont=Monace\ for\ Powerline
+let g:Powerline_symbols = 'fancy'
+
 set t_Co=256
 let g:solarized_termcolors=256
 set laststatus=2
