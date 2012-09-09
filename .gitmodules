@@ -33,7 +33,7 @@
 	url = git://github.com/cgardner/colorscheme-ubuntu.git
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
+	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
