@@ -29,7 +29,7 @@ set wildignore=*.swp,*.bak
 set title
 set ofu=syntaxcomplete#Complete
 
-set guifont=Monace\ for\ Powerline
+set guifont=Monaco\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
 
 set t_Co=256
@@ -51,7 +51,6 @@ nmap <silent> ,/ :let @/=""<CR>
 " SnipMate Settings
 let g:snips_author='Craig Gardner <craig.s.gardner@gmail.com>'
 map <Leader>rr :call ReloadAllSnippets()<CR>
-
 
 " NERDTree Settings
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
