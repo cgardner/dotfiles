@@ -25,6 +25,11 @@ tm() {
 		tmux split-window -h -p 30 -t $SESSION:0
 		tmux split-window -d -t $SESSION:0 'tail -f /var/log/apache2/error_log'
 
+		if [ -f "$PROJECT_DIR/Vagrantfile" ]; then
+			echo "Loading vagrant VM";
+			tmux new-window -t $SESSION:1 -k -n vagrant 'cd $PROJECT_DIR && vagrant up'
+		fi
+
 		tmux select-pane -t 0
 	fi
 
@@ -54,9 +59,17 @@ delold() {
   find $DELPATH* -mtime +$DAYS -exec rm {} \;
 }
 
+function _projects () {
+	local cur
+	COMPREPLY=()
+	cur=${COMP_WORDS[COMP_CWORD]}
+	COMPREPLY=($( compgen -W "$(ls $WORKING_DIR)" -- $cur))
+}
+complete -F _projects tm
+
 function _update_ps1()
 {
 	local CURDIR=$(dirname $BASH_SOURCE)
-	export PS1="$($CURDIR/powerline-bash/powerline-bash.py $?)"
+	export PS1="$($CURDIR/powerline-bash/powerline-bash.py $?)"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
 }
 export PROMPT_COMMAND="_update_ps1"
