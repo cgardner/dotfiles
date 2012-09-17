@@ -26,7 +26,6 @@ tm() {
 		tmux split-window -d -t $SESSION:0 'tail -f /var/log/apache2/error_log'
 
 		if [ -f "$PROJECT_DIR/Vagrantfile" ]; then
-			echo "Loading vagrant VM";
 			tmux new-window -t $SESSION:1 -k -n vagrant 'cd $PROJECT_DIR && vagrant up'
 		fi
 
