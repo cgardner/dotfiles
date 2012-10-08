@@ -35,6 +35,17 @@ tm() {
 	tmux attach -t $SESSION
 }
 
+pianobar() {
+	PIANOBAR=`which pianobar`
+	SESSION="pianobar"
+	tmux has-session -t $SESSION
+	if [ $? != 0 ]; then
+		tmux -2 new-session -d -s $SESSION
+		tmux new-window -t $SESSION:0 -k -n pianobar $PIANOBAR
+	fi
+	tmux attach -t $SESSION
+}
+
 # Count Files in a given Directory
 cf() {
   DIRECTORY="${1}"
