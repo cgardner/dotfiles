@@ -2,6 +2,19 @@ export EDITOR="vim"
 export PATH="$PATH:~/bin"
 export WORKING_DIR="$HOME/src"
 
+mutt() {
+	SESSION="tmux"
+	tmux has-session -t $SESSION
+	if [ $? != 0 ]; then
+		tmux -2 new-session -d -s $SESSION
+
+		tmux set-option default-path ~/Downloads
+		tmux new-window -t $SESSION:0 -k -n mutt 'mutt'
+		tmux select-pane -t 0
+	fi
+	tmux attach -t $SESSION
+}
+
 tm() {
 	which tmux 2> /dev/null
 	if [ $? != 0 ]; then
