@@ -3,7 +3,7 @@ export PATH="$PATH:~/bin"
 export WORKING_DIR="$HOME/src"
 
 mutt() {
-	SESSION="tmux"
+	SESSION="mutt"
 	tmux has-session -t $SESSION
 	if [ $? != 0 ]; then
 		tmux -2 new-session -d -s $SESSION
