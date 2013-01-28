@@ -1,7 +1,7 @@
 [user]
 	name = Craig Gardner
-	mail = craig@seabourneinc.com
-	email = craig@seabourneinc.com
+	mail = craig.s.gardner@gmail.com
+	email = craig.s.gardner@gmail.com
 [alias]
 	co = checkout 
 	mrg = merge --no-ff

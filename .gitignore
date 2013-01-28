@@ -3,3 +3,4 @@
 .vim/bundle/snipmate/doc/tags
 .pentadactyl/info/default/*
 .vim/NERDTreeBookmarks
+.DS_Store
