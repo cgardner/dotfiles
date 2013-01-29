@@ -1,6 +1,5 @@
+execute pathogen#infect()
 set nocompatible " This must be first.  it changes other options
-
-call pathogen#runtime_append_all_bundles()
 
 let mapleader=","
 
