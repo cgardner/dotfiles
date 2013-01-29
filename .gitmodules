@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/tabname"]
 	path = .vim/bundle/tabname
 	url = git://github.com/vim-scripts/Tab-Name.git
-[submodule ".pentadactyl/colors/ubuntu"]
-	path = .pentadactyl/colors/ubuntu
-	url = git://github.com/cgardner/colorscheme-ubuntu.git
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
