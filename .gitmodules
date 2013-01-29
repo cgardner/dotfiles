@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/tlib"]
-	path = .vim/bundle/tlib
-	url = https://github.com/tomtom/tlib_vim.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
@@ -31,9 +28,6 @@
 [submodule "tmux-powerline"]
 	path = tmux-powerline
 	url = git@github.com:cgardner/tmux-powerline.git
-[submodule ".vim/bundle/vim-addon-mw-utils"]
-	path = .vim/bundle/vim-addon-mw-utils
-	url = git://github.com/vim-scripts/vim-addon-mw-utils.git
 [submodule "powerline-shell"]
 	path = powerline-shell
 	url = git://github.com/milkbikis/powerline-shell.git
