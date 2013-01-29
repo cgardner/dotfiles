@@ -25,3 +25,6 @@
 [submodule "powerline-shell"]
 	path = powerline-shell
 	url = git://github.com/milkbikis/powerline-shell.git
+[submodule ".vim/snippets"]
+	path = .vim/snippets
+	url = git@github.com:cgardner/snipmate-snippets.git
