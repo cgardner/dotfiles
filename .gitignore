@@ -4,3 +4,5 @@
 .pentadactyl/info/default/*
 .vim/NERDTreeBookmarks
 .DS_Store
+.mutt/offlineimap.pyc
+.mutt/temp/**
