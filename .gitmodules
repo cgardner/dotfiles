@@ -34,9 +34,6 @@
 [submodule ".vim/bundle/zencoding"]
 	path = .vim/bundle/zencoding
 	url = git://github.com/mattn/zencoding-vim.git
-[submodule "powerline-bash"]
-	path = powerline-bash
-	url = git@github.com:cgardner/powerline-bash.git
 [submodule "tmux-powerline"]
 	path = tmux-powerline
 	url = git@github.com:cgardner/tmux-powerline.git
