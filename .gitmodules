@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-addon-mw-utils"]
 	path = .vim/bundle/vim-addon-mw-utils
 	url = git://github.com/vim-scripts/vim-addon-mw-utils.git
+[submodule "powerline-shell"]
+	path = powerline-shell
+	url = git://github.com/milkbikis/powerline-shell.git
