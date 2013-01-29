@@ -93,6 +93,7 @@ complete -F _projects tm
 function _update_ps1()
 {
 	local CURDIR=$(dirname $BASH_SOURCE)
-	export PS1="$($CURDIR/powerline-shell/powerline-shell.py $?)"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
+	export PS1="$($CURDIR/powerline-shell/powerline-shell.py $?)"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" |tr -d %) "$PWD")'
+	
 }
 export PROMPT_COMMAND="_update_ps1"
