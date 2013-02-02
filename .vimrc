@@ -121,3 +121,8 @@ au FileType javascript call JavaScriptFold()
 au FileType javascript setl fen
 
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
+"UltiSnips Configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
