@@ -1,0 +1,24 @@
+snippet thx "Sign Off" !b
+Thanks,
+Craig Gardner
+endsnippet
+
+global !p
+import subprocess
+import string
+def contact(t):
+	if t:
+		command = "/usr/local/bin/contacts -Sf '%n <%e>' '"+ t +"' | sed -e 's/TOKEN/\t/g' | sed '1 d'"
+		p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+		out, err = p.communicate()
+		opts = []
+		opts = string.split(out, "\n")
+		opts = [ m for m in opts if len(m) > 0 ]
+		if len(opts) == 1:
+			return opts[0]
+		return ',  '.join(opts)
+endglobal
+
+snippet "contact (\w+)" "Add someone to the email" r
+`!p snip.rv = contact(match.group(1))`
+endsnippet
