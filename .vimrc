@@ -126,3 +126,12 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+set cursorline 
+nnoremap <Leader>c :set cursorline!<CR>
+augroup CursorLine
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au winLeave * setlocal nocursorline nocursorcolumn
+augroup END
+hi CursorLine term=NONE cterm=NONE ctermbg=darkgray guibg=darkgray term=NONE
