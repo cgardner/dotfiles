@@ -13,6 +13,7 @@ set autoindent
 set smartindent
 set smarttab
 set number
+set expandtab
 set shiftwidth=2
 set pastetoggle=<F9>
 set ff=unix
