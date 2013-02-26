@@ -2,6 +2,8 @@ export EDITOR="vim"
 export PATH="$PATH:~/bin"
 export WORKING_DIR="$HOME/src"
 
+alias gi='git'
+
 mutt() {
 	SESSION="mutt"
 	tmux has-session -t $SESSION

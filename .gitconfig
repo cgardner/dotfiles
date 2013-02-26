@@ -11,6 +11,7 @@
 	fff = flow feature finish
 # Found these from https://github.com/gabebw/dotfiles/blob/master/gitconfig.erb
 	st = status -sb
+  tst = status -sb # this + "gi" = spell correction
 	lol = log --graph --all --pretty=format:'%Cred%h%Creset %Cblue%an%Creset: %s -%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [color]
 	ui = auto
