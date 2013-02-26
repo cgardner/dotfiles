@@ -50,3 +50,28 @@ snippet def "def (custom)"
  */
 define('${1}'${2});${3}
 endsnippet
+snippet getset "Create a getter and setter function" !b
+/**
+ * @var ${4:mixed} ${5:Description}
+ */
+${1:public} $${2:variable};
+
+/**
+ * Getter for $this->$2
+ * @param void
+ * @return $4
+ */
+${6:public }function get${2/(^|_)(\w)/\u$2/g}() {
+	return $this->$2;
+} // end function get${2/(^|_)(\w)/\u$2/g}()
+
+/**
+ * Setter for $this->$2
+ * @param $4 $arg0 Value to store in $2
+ * @return $this
+ */
+$6function set${2/(^|_)(\w)/\u$2/g}($arg0) {
+	$this->$2 = $arg0;
+	return $this;
+} // end function set${2/(^|_)(\w)/\u$2/g}()
+endsnippet
