@@ -6,3 +6,6 @@
 .DS_Store
 .mutt/offlineimap.pyc
 .mutt/temp/**
+*.log
+sites/default/files/*
+sites/all/modules/devel/*
