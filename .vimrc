@@ -135,4 +135,4 @@ augroup CursorLine
 	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
 	au winLeave * setlocal nocursorline nocursorcolumn
 augroup END
-hi CursorLine term=NONE cterm=NONE ctermbg=darkgray guibg=darkgray term=NONE
+hi CursorLine term=underline cterm=underline 
