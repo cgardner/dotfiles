@@ -8,13 +8,13 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set backspace=indent,eol,start
 set hidden
-set tabstop=2
+set tabstop=4
 set autoindent
 set smartindent
 set smarttab
 set number
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set pastetoggle=<F9>
 set ff=unix
 set ignorecase

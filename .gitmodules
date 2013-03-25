@@ -25,12 +25,12 @@
 [submodule ".vim/bundle/zencoding"]
 	path = .vim/bundle/zencoding
 	url = git://github.com/mattn/zencoding-vim.git
-[submodule "tmux-powerline"]
-	path = tmux-powerline
-	url = git@github.com:cgardner/tmux-powerline.git
-[submodule "powerline-shell"]
-	path = powerline-shell
-	url = git://github.com/milkbikis/powerline-shell.git
 [submodule ".vim/bundle/tlib"]
 	path = .vim/bundle/tlib
 	url = git@github.com:vim-scripts/tlib.git
+[submodule "tmux-powerline"]
+	path = tmux-powerline
+	url = git@github.com:cgardner/tmux-powerline.git
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
