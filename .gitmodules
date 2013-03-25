@@ -31,9 +31,6 @@
 [submodule "tmux-powerline"]
 	path = tmux-powerline
 	url = git@github.com:cgardner/tmux-powerline.git
-[submodule ".vim/bundle/command-t"]
-	path = .vim/bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule ".vim/bundle/editorconfig"]
 	path = .vim/bundle/editorconfig
 	url = git@github.com:editorconfig/editorconfig-vim.git
