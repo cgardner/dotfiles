@@ -8,7 +8,7 @@ snippet modal "Markup for a Twitter Bootstrap Modal" !b
         ${0:${VISUAL:Modal Body}}
     </div>
     <div class="modal-footer">
-        <div class="btn" data-dismiss="modal">${3:Close}</div>
+        <button class="btn" data-dismiss="modal">${3:Close}</button>
     </div>
 </div>
 endsnippet
@@ -18,5 +18,21 @@ snippet cg "Bootstrap Control Group"
 	<div class="controls">
 		<input type="${3:text}" name="$1" />$0
 	</div>
+</div>
+endsnippet
+snippet widget "BooAdmin Widget" !b
+<div class="widget$1">
+    <div class="widget-header">
+        <h4>$2</h4>
+        ${3:<div class="widget-tool"></div>}
+    </div>
+    <div class="widget-content">
+        <div class="widget-body">
+            ${4:${VISUAL: Widget Body}}
+        </div>
+    </div>
+    <div class="widget-footer">
+        $5
+    </div>
 </div>
 endsnippet
