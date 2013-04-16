@@ -1,20 +1,26 @@
 [user]
-	name = Craig Gardner
-	mail = craig.s.gardner@gmail.com
-	email = craig.s.gardner@gmail.com
+    name = Craig Gardner
+    mail = craig.s.gardner@gmail.com
+    email = craig.s.gardner@gmail.com
 [alias]
-	co = checkout 
-	mrg = merge --no-ff
-	ci = commit
-	b = branch
-	ffc = flow feature checkout
-	fff = flow feature finish
+    co = checkout 
+    mrg = merge --no-ff
+    ci = commit
+    b = branch
+    ffc = flow feature checkout
+    fff = flow feature finish
 # Found these from https://github.com/gabebw/dotfiles/blob/master/gitconfig.erb
-	st = status -sb
-  tst = status -sb # this + "gi" = spell correction
-	lol = log --graph --all --pretty=format:'%Cred%h%Creset %Cblue%an%Creset: %s -%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    st = status -sb
+    tst = status -sb # this + "gi" = spell correction
+    lol = log --graph --all --pretty=format:'%Cred%h%Creset %Cblue%an%Creset: %s -%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+    snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 [color]
-	ui = auto
+    ui = auto
 [core]
-	excludesfile = ~/.gitignore
-	quotepath = false
+    excludesfile = ~/.gitignore
+    quotepath = false
+[diff]
+    algorithm = patience
