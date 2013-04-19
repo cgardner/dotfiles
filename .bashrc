@@ -25,7 +25,7 @@ tm() {
 	fi
 
 	SESSION="${1}"
-	tmux has-session -t $SESSION 
+	tmux has-session -t $SESSION
 	# If there isn't an existing tmux session with that name, create one
 	if [ $? != 0 ]; then
 		tmux -2 new-session -d -s $SESSION
@@ -39,7 +39,14 @@ tm() {
 		tmux new-window -t $SESSION:0 -k -n vim 'vim'
 
 		tmux split-window -h -p 30 -t $SESSION:0
-		tmux split-window -d -t $SESSION:0 'tail -f /var/log/apache2/error_log'
+
+		local LOG_CMD="tail -f $APACHE_LOGS"
+		local CCZE_BIN=`which ccze`
+		if [ $? == 0 ]; then
+			LOG_CMD="$LOG_CMD | $CCZE_BIN -A"
+		fi
+
+		tmux split-window -d -t $SESSION:0 "$LOG_CMD"
 
 		if [ -f "$PROJECT_DIR/Vagrantfile" ]; then
 			tmux new-window -t $SESSION:1 -k -n vagrant 'cd $PROJECT_DIR && vagrant up'
@@ -78,7 +85,7 @@ delold() {
   if [ -z "$DAYS" ]; then
     DAYS="30"
   fi
-  
+
   if [ -z "$DELPATH" ]; then
     DELPATH="/tmp"
   fi
@@ -97,6 +104,6 @@ function _update_ps1()
 {
 	local CURDIR=$(dirname $BASH_SOURCE)
 	export PS1="$($CURDIR/powerline-shell/powerline-shell.py $?)"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" |tr -d %) "$PWD")'
-	
+
 }
 export PROMPT_COMMAND="_update_ps1"
