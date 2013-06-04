@@ -12,10 +12,10 @@ set tabstop=4
 set autoindent
 set smartindent
 set smarttab
-set number
 set expandtab
 set shiftwidth=4
 set pastetoggle=<F9>
+set clipboard=unnamed
 set ff=unix
 set ignorecase
 set smartcase
@@ -33,10 +33,16 @@ set guifont=Monaco\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
 
 set t_Co=256
-let g:solarized_termcolors=256
 set laststatus=2
 colorscheme slate
 set background=dark
+
+
+set number " show line numbers
+set tw=79 " width of document (used by gd)
+set nowrap " don't automatically wrap on load
+set fo-=t " don't automatically wrap text when typing
+
 
 filetype on
 filetype plugin on
@@ -136,3 +142,21 @@ augroup CursorLine
 	au winLeave * setlocal nocursorline nocursorcolumn
 augroup END
 hi CursorLine term=underline cterm=underline 
+
+
+autocmd! bufwritepost .vimrc source %
+
+" Show Git diff in window split when commiting 
+" http://vimbits.com/bits/173
+autocmd FileType gitcommit DiffGitCached | wincmd p
+
+" Easy split navigation 
+" http://vimbits.com/bits/10
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Select All
+" http://vimbits.com/bits/82
+map <Leader>a ggVG
