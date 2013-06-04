@@ -160,3 +160,12 @@ nnoremap <C-l> <C-w>l
 " Select All
 " http://vimbits.com/bits/82
 map <Leader>a ggVG
+
+" Keep search pattern at the center of the screen.
+" vimbits.com/bits/92
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+nnoremap <silent> g# g#zz
