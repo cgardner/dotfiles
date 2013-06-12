@@ -48,8 +48,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
-autocmd FileType php noremap <C-L> :!/usr/local/bin/php -l %<CR>
-autocmd FileType php noremap <C-M> :w!<CR>:!/usr/local/bin/php %<CR>
+autocmd FileType php noremap <M-L> :!/usr/local/bin/php -l %<CR>
+autocmd FileType php noremap <M-M> :w!<CR>:!/usr/local/bin/php %<CR>
 
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
