@@ -32,10 +32,22 @@ set ofu=syntaxcomplete#Complete
 set guifont=Monaco\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
 
-set t_Co=256
 set laststatus=2
-colorscheme slate
+
+" Configure colors
+syntax enable
+let g:solarized_termcolors=256
+colorscheme solarized
 set background=dark
+set cursorline
+nnoremap <Leader>c :set cursorline!<CR>
+augroup CursorLine
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au winLeave * setlocal nocursorline nocursorcolumn
+augroup END
+hi CursorLine term=underline cterm=underline
+
 
 
 set number " show line numbers
@@ -84,7 +96,6 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.view set filetype=php
   augroup END
 endif
-syntax enable
 
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
@@ -133,15 +144,6 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-set cursorline 
-nnoremap <Leader>c :set cursorline!<CR>
-augroup CursorLine
-	au!
-	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-	au winLeave * setlocal nocursorline nocursorcolumn
-augroup END
-hi CursorLine term=underline cterm=underline 
 
 
 autocmd! bufwritepost .vimrc source %
