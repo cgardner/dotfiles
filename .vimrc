@@ -15,7 +15,6 @@ set smarttab
 set expandtab
 set shiftwidth=4
 set pastetoggle=<F9>
-set clipboard=unnamed
 set ff=unix
 set ignorecase
 set smartcase
@@ -65,10 +64,6 @@ autocmd FileType php noremap <M-M> :w!<CR>:!/usr/local/bin/php %<CR>
 
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
-
-" SnipMate Settings
-let g:snips_author='Craig Gardner <craig.s.gardner@gmail.com>'
-map <Leader>rr :call ReloadAllSnippets()<CR>
 
 " NERDTree Settings
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
@@ -125,19 +120,6 @@ noremap <silent><Leader>/ :nohls<CR>
 noremap <F1> <Esc>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
-function! JavaScriptFold() 
-    setl foldmethod=syntax
-    setl foldlevelstart=1
-    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-
-    function! FoldText()
-        return substitute(getline(v:foldstart), '{.*', '{...}', '')
-    endfunction
-    setl foldtext=FoldText()
-endfunction
-au FileType javascript call JavaScriptFold()
-au FileType javascript setl fen
-
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 "UltiSnips Configuration
@@ -145,14 +127,22 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+set cursorline
+nnoremap <Leader>c :set cursorline!<CR>
+augroup CursorLine
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au winLeave * setlocal nocursorline nocursorcolumn
+augroup END
+hi CursorLine term=underline cterm=underline
 
 autocmd! bufwritepost .vimrc source %
 
-" Show Git diff in window split when commiting 
+" Show Git diff in window split when commiting
 " http://vimbits.com/bits/173
 autocmd FileType gitcommit DiffGitCached | wincmd p
 
-" Easy split navigation 
+" Easy split navigation
 " http://vimbits.com/bits/10
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
