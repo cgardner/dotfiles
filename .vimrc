@@ -138,6 +138,9 @@ hi CursorLine term=underline cterm=underline
 
 autocmd! bufwritepost .vimrc source %
 
+" Ctrl+P Settings
+let g:ctrlp_custom_ignore = '\v[\/](template_c|.git)$'
+
 " Show Git diff in window split when commiting
 " http://vimbits.com/bits/173
 autocmd FileType gitcommit DiffGitCached | wincmd p
