@@ -81,3 +81,7 @@ $6function set${2/(^|_)(\w)/\u$2/g}($arg0) {
 	return $this;
 } // end function set${2/(^|_)(\w)/\u$2/g}()
 endsnippet
+
+snippet model "Instantiate a model" !b
+$${1:my_model}_model = new ${1/(^|_)(\w)/\u$2/g}Model($2);
+endsnippet
