@@ -22,9 +22,6 @@
 [submodule ".vim/bundle/php"]
 	path = .vim/bundle/php
 	url = https://github.com/shawncplus/php.vim.git
-[submodule ".vim/bundle/zencoding"]
-	path = .vim/bundle/zencoding
-	url = git://github.com/mattn/zencoding-vim.git
 [submodule ".vim/bundle/tlib"]
 	path = .vim/bundle/tlib
 	url = git@github.com:vim-scripts/tlib.git
@@ -46,3 +43,6 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/emmet-vim"]
+	path = .vim/bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
