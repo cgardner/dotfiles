@@ -19,43 +19,54 @@ mutt() {
 }
 
 tm() {
-	which tmux 2> /dev/null
+	which tmux >/dev/null 2> /dev/null
 	if [ $? != 0 ]; then
 		return
 	fi
 
-	SESSION="${1}"
-	tmux has-session -t $SESSION
+	local SESSION="${1}"
 	# If there isn't an existing tmux session with that name, create one
-	if [ $? != 0 ]; then
-		tmux -2 new-session -d -s $SESSION
+	local PROJECT_DIR="$WORKING_DIR/$SESSION"
+	if [ ! -d "$PROJECT_DIR" -a -d "$SESSION" ]; then
+		PROJECT_DIR=$SESSION
+		SESSION=`basename $SESSION`
+	fi
 
-		PROJECT_DIR="$WORKING_DIR/$SESSION/repo"
-		if [ -d "$PROJECT_DIR" ]; then
-			tmux set-option default-path $PROJECT_DIR
-		fi
+	tmux has-session -t $SESSION
+	if [ $? -eq 1 ]; then
+		echo "starting the session..."
+		tmux new-session -d -s $SESSION
 
+		tmux set-option default-path $PROJECT_DIR
 		tmux set-window-option -t $SESSION -g automatic-rename off
 		tmux new-window -t $SESSION:0 -k -n vim 'vim'
 
 		tmux split-window -h -p 30 -t $SESSION:0
 
-		local LOG_CMD="tail -f $APACHE_LOGS"
-		local CCZE_BIN=`which ccze`
-		if [ $? == 0 ]; then
-			LOG_CMD="$LOG_CMD | $CCZE_BIN -A"
+		if [ "$APACHE_LOGS" -ne "" -a -f $APACHE_LOGS ]; then
+			local LOG_CMD="tail -f $APACHE_LOGS"
+			local CCZE_BIN=`which ccze`
+			if [ $? == 0 ]; then
+				LOG_CMD="$LOG_CMD | $CCZE_BIN -A"
+			fi
+			tmux split-window -d -t $SESSION:0 "$LOG_CMD"
 		fi
 
-		tmux split-window -d -t $SESSION:0 "$LOG_CMD"
 
 		if [ -f "$PROJECT_DIR/Vagrantfile" ]; then
 			tmux new-window -t $SESSION:1 -k -n vagrant 'cd $PROJECT_DIR && vagrant up'
 		fi
 
 		tmux select-pane -t 0
+	else
+		echo "Not starting a session"
 	fi
 
-	tmux attach -t $SESSION
+	tmux has-session -t $SESSION
+	echo $?
+	if [ $? -ne 1 ]; then
+		tmux attach -t $SESSION
+	fi
 }
 
 pianobar() {
