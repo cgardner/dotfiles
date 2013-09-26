@@ -1,4 +1,6 @@
 execute pathogen#infect()
+call pathogen#helptags()
+
 set nocompatible " This must be first.  it changes other options
 
 let mapleader=","
@@ -35,9 +37,10 @@ set laststatus=2
 
 " Configure colors
 syntax enable
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 colorscheme solarized
 set background=dark
+
 set cursorline
 nnoremap <Leader>c :set cursorline!<CR>
 augroup CursorLine
@@ -169,3 +172,5 @@ nnoremap <silent> g# g#zz
 " http://vimbits.com/bits/20
 vnoremap < <gv
 vnoremap > >gv
+
+let g:vdebug_options = { "ide_key": "craiggardnerdev" }
