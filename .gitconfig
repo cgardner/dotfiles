@@ -18,6 +18,7 @@
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
     snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
     a = add -p
+    up = !git fetch upstream && git pull --rebase upstream master
     update = !git fetch && git pull --rebase
     bd = branch -d 
 [color]
