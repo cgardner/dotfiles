@@ -175,6 +175,19 @@ let g:vdebug_options = { "ide_key": "craiggardnerdev" }
 " Tagbar Configuration
 nmap <F8> :TagbarToggle<CR>
 
+" Moving Lines http://reefpoints.dockyard.com/2013/09/26/vim-moving-lines-aint-hard.html
+" Normal mode
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+
+" Insert mode
+inoremap <M-j> <ESC>:m .+1<CR>==gi
+inoremap <M-k> <ESC>:m .-2<CR>==gi
+
+" Visual mode
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
+
 " Syntastic Configuration
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
 let g:syntastic_php_phpcs_args="--standard=PSR2 --tab-width=4"
