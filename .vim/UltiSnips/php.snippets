@@ -4,7 +4,8 @@ snippet docf "Function with Docblock" !b
  * @param $3 ${5:Param Description}
  * @return ${6:void}
  */
-${1:public }function $2($3) {
+${1:public }function $2($3)
+{
 	${VISUAL}$0
 } // end function $2()
 endsnippet
@@ -67,7 +68,8 @@ $0
  * @param void
  * @return $4
  */
-${6:public }function get${2/(^|_)(\w)/\u$2/g}() {
+${6:public }function get${2/(^|_)(\w)/\u$2/g}()
+{
 	return $this->$2;
 } // end function get${2/(^|_)(\w)/\u$2/g}()
 
@@ -76,7 +78,8 @@ ${6:public }function get${2/(^|_)(\w)/\u$2/g}() {
  * @param $4 $arg0 Value to store in $2
  * @return $this
  */
-$6function set${2/(^|_)(\w)/\u$2/g}($arg0) {
+$6function set${2/(^|_)(\w)/\u$2/g}($arg0)
+{
 	$this->$2 = $arg0;
 	return $this;
 } // end function set${2/(^|_)(\w)/\u$2/g}()
