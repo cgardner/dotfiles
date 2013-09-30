@@ -81,9 +81,6 @@ nmap <Leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
 
 " Filetype Settings
 if has("autocmd")
-	" PHP Settings
-	autocmd FileType php noremap <C-L> :!/usr/bin/php -l %<CR>
-
   " Drupal *.module and *.install files.
   augroup module
     autocmd BufRead,BufNewFile *.module set filetype=php
@@ -123,7 +120,6 @@ noremap <silent><Leader>/ :nohls<CR>
 noremap <F1> <Esc>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 "UltiSnips Configuration
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -178,3 +174,14 @@ let g:vdebug_options = { "ide_key": "craiggardnerdev" }
 
 " Tagbar Configuration
 nmap <F8> :TagbarToggle<CR>
+
+" Syntastic Configuration
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_args="--standard=PSR2 --tab-width=4"
+
+" colorize long lines
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.*/
+
+" Keep this at the end to make sure all configurations get set properly
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
