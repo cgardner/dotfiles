@@ -173,4 +173,8 @@ nnoremap <silent> g# g#zz
 vnoremap < <gv
 vnoremap > >gv
 
+" Vdebug Configuration
 let g:vdebug_options = { "ide_key": "craiggardnerdev" }
+
+" Tagbar Configuration
+nmap <F8> :TagbarToggle<CR>
