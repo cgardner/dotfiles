@@ -3,7 +3,7 @@ export PATH="$PATH:~/bin"
 export WORKING_DIR="$HOME/src"
 export TERM="xterm-256color"
 
-alias gi='git'
+alias g='git'
 
 mutt() {
 	SESSION="mutt"
