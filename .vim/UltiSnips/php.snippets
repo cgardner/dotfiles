@@ -7,18 +7,18 @@ snippet docf "Function with Docblock" !b
 ${1:public }function $2($3)
 {
 	${VISUAL}$0
-} // end function $2()
+}
 endsnippet
 
 snippet if "If statement" !b
 if (${1:TRUE}) {
 	${VISUAL}$0
-} // end if ($1)
+}
 endsnippet
 snippet elseif "If statement" !b
 else if (${1:TRUE}) {
 	${VISUAL}$0
-} // end else if ($1)
+}
 endsnippet
 
 snippet vd "var_dump" 
@@ -30,7 +30,7 @@ snippet cls "Class Definition" b
  */
 class ${1:ClassName} {
 	$0
-} // end class $1
+}
 endsnippet
 snippet jexec "Joomla _JEXEC test" b
 defined('_JEXEC') or die;
@@ -45,7 +45,7 @@ endsnippet
 snippet foreach "Foreach Loop" b
 foreach (${1:variable} as ${2:value}) {
 	${0:${VISUAL:\/\/ Code}}
-} // end foreach ($1 as $2)
+}
 endsnippet
 snippet kpr "Quick kpr()"
 kpr(${1:"dump"});
@@ -65,16 +65,18 @@ $0
 
 /**
  * Getter for $this->$2
+ * 
  * @param void
  * @return $4
  */
 ${6:public }function get${2/(^|_)(\w)/\u$2/g}()
 {
 	return $this->$2;
-} // end function get${2/(^|_)(\w)/\u$2/g}()
+}
 
 /**
  * Setter for $this->$2
+ * 
  * @param $4 $arg0 Value to store in $2
  * @return $this
  */
@@ -82,7 +84,7 @@ $6function set${2/(^|_)(\w)/\u$2/g}($arg0)
 {
 	$this->$2 = $arg0;
 	return $this;
-} // end function set${2/(^|_)(\w)/\u$2/g}()
+}
 endsnippet
 
 snippet model "Instantiate a model" !b
