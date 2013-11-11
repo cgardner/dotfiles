@@ -5,6 +5,7 @@
 [alias]
     co = checkout 
     mrg = merge --no-ff
+    ms = merge --squash
     ci = commit
     b = branch
     ffc = flow feature checkout
