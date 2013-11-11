@@ -38,6 +38,7 @@ set laststatus=2
 " Configure colors
 syntax enable
 let g:solarized_termcolors=16
+set t_Co=256 " enable 256 colors
 colorscheme solarized
 set background=dark
 
@@ -173,7 +174,7 @@ vnoremap > >gv
 let g:vdebug_options = { "ide_key": "craiggardnerdev" }
 
 " Tagbar Configuration
-nmap <F8> :TagbarToggle<CR>
+map <Leader>t :TagbarToggle<CR>
 
 " Moving Lines http://reefpoints.dockyard.com/2013/09/26/vim-moving-lines-aint-hard.html
 " Normal mode
@@ -194,7 +195,7 @@ let g:syntastic_php_phpcs_args="--standard=PSR2 --tab-width=4"
 
 " colorize long lines
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.*/
+match OverLength /\%121v.*/
 
 " Keep this at the end to make sure all configurations get set properly
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
