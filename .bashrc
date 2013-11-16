@@ -32,38 +32,39 @@ tm() {
 		SESSION=`basename $SESSION`
 	fi
 
+	if [ -d "$PROJECT_DIR/repo" ]; then
+		PROJECT_DIR="$PROJECT_DIR/repo"
+	fi
+
 	tmux has-session -t $SESSION
 	if [ $? -eq 1 ]; then
 		echo "starting the session..."
-		tmux new-session -d -s $SESSION
+		tmux start-server \; \
+			new-session -d -s $SESSION \; \
+			set-option default-path $PROJECT_DIR \; \
+			set-window-option -t $SESSION -g automatic-rename off  \; \
+			new-window -t $SESSION:0 -k -n vim 'vim' \; \
+			split-window -h -p 40 -t $SESSION:0 \; \
+			select-pane -t 1
 
-		tmux set-option default-path $PROJECT_DIR
-		tmux set-window-option -t $SESSION -g automatic-rename off
-		tmux new-window -t $SESSION:0 -k -n vim 'vim'
-
-		tmux split-window -h -p 30 -t $SESSION:0
-
-		if [ "$APACHE_LOGS" -ne "" -a -f $APACHE_LOGS ]; then
-			local LOG_CMD="tail -f $APACHE_LOGS"
-			local CCZE_BIN=`which ccze`
-			if [ $? == 0 ]; then
-				LOG_CMD="$LOG_CMD | $CCZE_BIN -A"
-			fi
-			tmux split-window -d -t $SESSION:0 "$LOG_CMD"
-		fi
+#		if [ "$APACHE_LOGS" -ne "" -a -f $APACHE_LOGS ]; then
+#			local LOG_CMD="tail -f $APACHE_LOGS"
+#			local CCZE_BIN=`which ccze`
+#			if [ $? == 0 ]; then
+#				LOG_CMD="$LOG_CMD | $CCZE_BIN -A"
+#			fi
+#			tmux split-window -d -t $SESSION:0 "$LOG_CMD"
+#		fi
 
 
-		if [ -f "$PROJECT_DIR/Vagrantfile" ]; then
-			tmux new-window -t $SESSION:1 -k -n vagrant 'cd $PROJECT_DIR && vagrant up'
-		fi
-
-		tmux select-pane -t 0
+#		if [ -f "$PROJECT_DIR/Vagrantfile" ]; then
+#			tmux new-window -t $SESSION:1 -k -n vagrant 'cd $PROJECT_DIR && vagrant up'
+#		fi
 	else
 		echo "Not starting a session"
 	fi
 
 	tmux has-session -t $SESSION
-	echo $?
 	if [ $? -ne 1 ]; then
 		tmux attach -t $SESSION
 	fi
