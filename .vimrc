@@ -37,7 +37,7 @@ set laststatus=2
 
 " Configure colors
 syntax enable
-let g:solarized_termcolors=16
+let g:solarized_termcolors=256
 set t_Co=256 " enable 256 colors
 colorscheme solarized
 set background=dark
