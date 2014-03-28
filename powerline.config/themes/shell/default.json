@@ -40,7 +40,10 @@
 				"name": "jobnum"
 			},
             {
-                "name": "branch"
+                "name": "branch",
+                "args": {
+                    "status_colors": true
+                }
             }
 		],
 		"right": [
