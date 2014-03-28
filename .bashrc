@@ -126,4 +126,4 @@ function _projects () {
 complete -F _projects tm
 complete -F _projects cproj
 
-. ./powerline/bindings/bash/powerline.sh
+. $(dirname "${BASH_SOURCE[0]}")/powerline/powerline/bindings/bash/powerline.sh
