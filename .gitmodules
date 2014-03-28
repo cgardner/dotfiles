@@ -13,9 +13,6 @@
 [submodule ".vim/bundle/tlib"]
 	path = .vim/bundle/tlib
 	url = git@github.com:vim-scripts/tlib.git
-[submodule "tmux-powerline"]
-	path = tmux-powerline
-	url = git@github.com:cgardner/tmux-powerline.git
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
