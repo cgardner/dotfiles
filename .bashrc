@@ -18,6 +18,33 @@ mutt() {
 	tmux attach -t $SESSION
 }
 
+mkproj() {
+    local REPO_URL="${1}"
+    local PROJECT_DIR="$WORKING_DIR/`basename "$REPO_URL" .git`"
+
+    if [ -d "$PROJECT_DIR" ]; then
+        echo "Project Already Exists";
+        cd $PROJECT_DIR
+        return
+    fi
+
+    mkdir -p $PROJECT_DIR
+    git clone $REPO_URL $PROJECT_DIR/repo;
+    cd $PROJECT_DIR/repo
+}
+
+cproj() {
+    local PROJECT_NAME="${1}"
+    local PROJECT_DIR="$WORKING_DIR/$PROJECT_NAME/repo"
+
+    if [ ! -d "$PROJECT_DIR" ] ; then 
+        echo "Project $PROJECT_NAME does not exist"
+        return
+    fi
+
+    cd $PROJECT_DIR;
+}
+
 tm() {
 	which tmux >/dev/null 2> /dev/null
 	if [ $? != 0 ]; then
@@ -39,27 +66,13 @@ tm() {
 	tmux has-session -t $SESSION
 	if [ $? -eq 1 ]; then
 		echo "starting the session..."
+        cd $PROJECT_DIR;
 		tmux start-server \; \
 			new-session -d -s $SESSION \; \
-			set-option default-path $PROJECT_DIR \; \
 			set-window-option -t $SESSION -g automatic-rename off  \; \
 			new-window -t $SESSION:0 -k -n vim 'vim' \; \
 			split-window -h -p 40 -t $SESSION:0 \; \
 			select-pane -t 1
-
-#		if [ "$APACHE_LOGS" -ne "" -a -f $APACHE_LOGS ]; then
-#			local LOG_CMD="tail -f $APACHE_LOGS"
-#			local CCZE_BIN=`which ccze`
-#			if [ $? == 0 ]; then
-#				LOG_CMD="$LOG_CMD | $CCZE_BIN -A"
-#			fi
-#			tmux split-window -d -t $SESSION:0 "$LOG_CMD"
-#		fi
-
-
-#		if [ -f "$PROJECT_DIR/Vagrantfile" ]; then
-#			tmux new-window -t $SESSION:1 -k -n vagrant 'cd $PROJECT_DIR && vagrant up'
-#		fi
 	else
 		echo "Not starting a session"
 	fi
@@ -111,5 +124,6 @@ function _projects () {
 	COMPREPLY=($( compgen -W "$(ls $WORKING_DIR)" -- $cur))
 }
 complete -F _projects tm
+complete -F _projects cproj
 
 . ./powerline/bindings/bash/powerline.sh
