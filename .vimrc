@@ -1,6 +1,8 @@
 execute pathogen#infect()
 call pathogen#helptags()
 
+set rtp+=./powerline/powerline/bindings/vim
+
 set nocompatible " This must be first.  it changes other options
 
 let mapleader=","
@@ -29,18 +31,17 @@ set undolevels=1000
 set wildignore=*.swp,*.bak
 set title
 set ofu=syntaxcomplete#Complete
-
-set guifont=Monaco\ for\ Powerline
-let g:Powerline_symbols = 'fancy'
+syntax enable
 
 set laststatus=2
 
 " Configure colors
-syntax enable
-let g:solarized_termcolors=256
-set t_Co=256 " enable 256 colors
 colorscheme solarized
 set background=dark
+
+set guifont=Inconsolata\ for\ Powerline
+let g:Powerline_symbols = 'fancy'
+
 
 set cursorline
 nnoremap <Leader>c :set cursorline!<CR>
@@ -50,8 +51,6 @@ augroup CursorLine
 	au winLeave * setlocal nocursorline nocursorcolumn
 augroup END
 hi CursorLine term=underline cterm=underline
-
-
 
 set number " show line numbers
 set tw=79 " width of document (used by gd)
