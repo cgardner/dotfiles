@@ -29,3 +29,5 @@
     quotepath = false
 [diff]
     algorithm = patience
+[push]
+	default = simple
