@@ -10,7 +10,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=/Users/gardnerc/.task
+data.location=~/.task
 
 #color=on
 report.next.filter=status.not:deleted project:ADP
