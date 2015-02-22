@@ -127,3 +127,7 @@ complete -F _projects tm
 complete -F _projects cproj
 
 . $(dirname "${BASH_SOURCE[0]}")/powerline/powerline/bindings/bash/powerline.sh
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
