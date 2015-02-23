@@ -3,13 +3,19 @@
     mail = craig.s.gardner@gmail.com
     email = craig.s.gardner@gmail.com
 [alias]
-    co = checkout 
+    co = checkout
     mrg = merge --no-ff
     ms = merge --squash
-    ci = commit
+    ci = commit -v
     b = branch
+
+    # Git Flow Shortcuts
+    ffs = flow feature start
     ffc = flow feature checkout
     fff = flow feature finish
+    frs = flow release start
+    frf = flow release finish
+
 # Found these from https://github.com/gabebw/dotfiles/blob/master/gitconfig.erb
     st = status -sb
     tst = status -sb # this + "gi" = spell correction
@@ -21,13 +27,15 @@
     a = add -p
     up = !git fetch upstream && git pull --rebase upstream master
     update = !git fetch && git pull --rebase
-    bd = branch -d 
+    bd = branch -d
 [color]
     ui = auto
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = /Users/cgardner/.gitignore
     quotepath = false
 [diff]
     algorithm = patience
 [push]
-	default = simple
+    default = simple
+[init]
+    templatedir = ~/src/dotfiles/repo/git_template
