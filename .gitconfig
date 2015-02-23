@@ -1,7 +1,7 @@
 [user]
     name = Craig Gardner
-    mail = craig.s.gardner@gmail.com
-    email = craig.s.gardner@gmail.com
+    mail = craig.gardner@cdk.com
+    email = craig.gardner@cdk.com
 [alias]
     co = checkout
     mrg = merge --no-ff
@@ -12,6 +12,7 @@
     # Git Flow Shortcuts
     ffs = flow feature start
     ffc = flow feature checkout
+    ffs = flow feature start
     fff = flow feature finish
     frs = flow release start
     frf = flow release finish
@@ -28,10 +29,11 @@
     up = !git fetch upstream && git pull --rebase upstream master
     update = !git fetch && git pull --rebase
     bd = branch -d
+    news = log -p HEAD@{1}..HEAD@{0}
 [color]
     ui = auto
 [core]
-    excludesfile = /Users/cgardner/.gitignore
+	excludesfile = /Users/gardnerc/.gitignore
     quotepath = false
 [diff]
     algorithm = patience

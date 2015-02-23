@@ -1,7 +1,9 @@
+let g:pathogen_disabled = ['vim-cucumber', 'phpfolding', 'vdebug']
+
 execute pathogen#infect()
 call pathogen#helptags()
 
-set rtp+=./powerline/powerline/bindings/vim
+" set rtp+=./powerline/powerline/bindings/vim
 
 set nocompatible " This must be first.  it changes other options
 
@@ -70,7 +72,6 @@ nmap <silent> ,/ :let @/=""<CR>
 
 " NERDTree Settings
 let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
-let NERDTreeIgnore=[ '\.git$' ]
 let NERDTreeShowBookmarks=1
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=0
@@ -139,10 +140,6 @@ autocmd! bufwritepost .vimrc source %
 
 " Ctrl+P Settings
 let g:ctrlp_custom_ignore = '\v[\/](template_c|.git)$'
-
-" Show Git diff in window split when commiting
-" http://vimbits.com/bits/173
-autocmd FileType gitcommit DiffGitCached | wincmd p
 
 " Easy split navigation
 " http://vimbits.com/bits/10
