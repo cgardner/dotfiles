@@ -23,5 +23,5 @@ LABEL='code commit'
 
 if [[ ${#MESSAGE} -gt 20 ]]; then
   curl --data "key=$API_KEY&highlight_date=$DATE_TODAY&description=$MESSAGE&source=$LABEL" https://www.rescuetime.com/anapi/highlights_post
-  curl -X POST --data "team=craigs-calendar-qs6O&raw_text=$MESSAGE#$BRANCH" -H 'Authorization: Token $IDONETHIS_API_KEY' https://idonethis.com/api/v0.1/dones/
+  curl --data "team=craigs-calendar-qs6O&raw_text=$MESSAGE #$BRANCH" -H "Authorization: Token $IDONETHIS_API_KEY" https://idonethis.com/api/v0.1/dones/
 fi
