@@ -1,6 +1,0 @@
-[submodule ".vim/bundle/tlib"]
-	path = .vim/bundle/tlib
-	url = git@github.com:vim-scripts/tlib.git
-[submodule "powerline"]
-	path = powerline
-	url = git@github.com:Lokaltog/powerline.git
