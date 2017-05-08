@@ -9,19 +9,3 @@
 # 3. All commits will be automatically logged as highlight events.
 #
 
-API_KEY=B63hQdV0BvBVm59lEPLxoDUJQktR0ioTL6K0p1cU
-IDONETHIS_API_KEY=268b41f8c4c17725cc0b3b7fd5422900edb3679f
-
-# REQUIRED FIELDS - Today's date and commit message
-MESSAGE=$(git log -1 HEAD --pretty=format:%s)
-BRANCH=$(git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2)
-
-DATE_TODAY=$(date +"%Y-%m-%d")
-
-# OPTIONAL - Label
-LABEL='code commit'
-
-if [[ ${#MESSAGE} -gt 20 ]]; then
-  curl --data "key=$API_KEY&highlight_date=$DATE_TODAY&description=$MESSAGE&source=$LABEL" https://www.rescuetime.com/anapi/highlights_post
-  curl --data "team=craigs-calendar-qs6O&raw_text=$MESSAGE #$BRANCH" -H "Authorization: Token $IDONETHIS_API_KEY" https://idonethis.com/api/v0.1/dones/
-fi
