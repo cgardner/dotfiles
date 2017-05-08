@@ -38,7 +38,7 @@ syntax enable
 set laststatus=2
 
 " Configure colors
-colorscheme solarized
+" colorscheme solarized
 set background=dark
 
 set guifont=Inconsolata\ for\ Powerline

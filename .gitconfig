@@ -8,6 +8,8 @@
     ms = merge --squash
     ci = commit -v
     b = branch
+    cl = clean -fd -e .vagrant
+    diff = diff --ignore-space-at-eol
 
     # Git Flow Shortcuts
     ffs = flow feature start
@@ -30,14 +32,21 @@
     update = !git fetch && git pull --rebase
     bd = branch -d
     news = log -p HEAD@{1}..HEAD@{0}
+    pt = !git tag -l | xargs git tag -d && git fetch -t
 [color]
     ui = auto
 [core]
 	excludesfile = /Users/gardnerc/.gitignore
     quotepath = false
+	whitespace = cr-at-eol
 [diff]
     algorithm = patience
 [push]
     default = simple
 [init]
     templatedir = ~/src/dotfiles/repo/git_template
+[fetch]
+	recurseSubmodules = false
+	prune = true
+[url "https://"]
+        insteadOf = git://

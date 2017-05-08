@@ -30,6 +30,11 @@ mkproj() {
 
     mkdir -p $PROJECT_DIR
     git clone $REPO_URL $PROJECT_DIR/repo;
+	if [ $? -ne 0 ]; then
+		echo "Unable to clone repository"
+		return $?
+	fi
+
     cd $PROJECT_DIR/repo
 
 		which git-flow
@@ -138,10 +143,11 @@ function _projects () {
 	cur=${COMP_WORDS[COMP_CWORD]}
 	COMPREPLY=($( compgen -W "$(ls $WORKING_DIR)" -- $cur))
 }
-complete -F _projects tm
-complete -F _projects cproj
 
-. $(dirname "${BASH_SOURCE[0]}")/powerline/powerline/bindings/bash/powerline.sh
+if [ "$SHELL" != "/bin/zsh" ]; then
+	complete -F _projects tm
+	complete -F _projects cproj
+fi
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
