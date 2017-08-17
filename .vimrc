@@ -1,7 +1,69 @@
-let g:pathogen_disabled = ['vim-cucumber', 'phpfolding', 'vdebug']
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-execute pathogen#infect()
-call pathogen#helptags()
+" Required:
+set runtimepath+=/Users/gardnerc/.vim/bundles/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('/Users/gardnerc/.vim/bundles')
+  call dein#begin('/Users/gardnerc/.vim/bundles')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/gardnerc/.vim/bundles/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('scrooloose/nerdtree', {'on_cmd': 'NERDTreeToggle'})
+  call dein#add('leafgarland/typescript-vim')
+  call dein#add('Quramy/tsuquyomi')
+  call dein#add('Shougo/vimproc', {
+    \ 'build' : {
+    \     'windows' : 'tools\\update-dll-mingw',
+    \     'cygwin' : 'make -f make_cygwin.mak',
+    \     'mac' : 'make -f make_mac.mak',
+    \     'linux' : 'make',
+    \     'unix' : 'gmake',
+    \    },
+    \ })
+  call dein#add('Valloric/YouCompleteMe', {
+       \ 'build' : {
+       \     'mac' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+       \     'unix' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+       \     'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+       \     'cygwin' : './install.sh --clang-completer --system-libclang --omnisharp-completer'
+       \    }
+       \ })
+
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+if !exists("g:ycm_semantic_triggers")
+ let g:ycm_semantic_triggers = {}
+ endif
+ let g:ycm_semantic_triggers['typescript'] = ['.']
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
+
+filetype plugin indent on
+syntax enable
 
 " set rtp+=./powerline/powerline/bindings/vim
 
@@ -58,7 +120,6 @@ set number " show line numbers
 set tw=79 " width of document (used by gd)
 set nowrap " don't automatically wrap on load
 set fo-=t " don't automatically wrap text when typing
-
 
 filetype on
 filetype plugin on
