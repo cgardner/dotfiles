@@ -1,5 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+local my_file=${(%):-%N}
+
+. $HOME/.ngcompletion.zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -52,11 +55,12 @@ ENABLE_CORRECTION="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git grunt composer tmux git-flow-avh brew bower atom projects mvn vagrant bgnotify yarn phing npm gulp docker ant gradle)
+plugins=(git tmux git-flow-avh brew projects yarn phing npm docker)
 
 # User configuration
 
@@ -97,14 +101,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zref=". ~/.zshrc"
-alias consul="consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul -advertise=127.0.0.1 -ui-dir /opt/homebrew-cask/Caskroom/consul-web-ui/0.6.0"
+#alias consul="consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul -advertise=127.0.0.1 -ui-dir /opt/homebrew-cask/Caskroom/consul-web-ui/0.6.0"
 alias sshconfig="vim ~/.ssh/config"
 alias c="php -n -d memory_limit=-1 /usr/local/bin/composer"
 alias nr="npm run"
 alias ni="npm i"
 
-export HOMEBREW_GITHUB_API_TOKEN="da2a63892ec40c7b0f1028de48fb0c8103f952ba"
-export DOCKER_TLS_VERIFY="1"
+export HOMEBREW_GITHUB_API_TOKEN="4b961ac37270c23022e13bd4abbef704263c186f"
 
 export NVM_DIR="/Users/gardnerc/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
