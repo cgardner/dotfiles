@@ -128,6 +128,8 @@ filetype indent on
 autocmd FileType php noremap <M-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <M-M> :w!<CR>:!/usr/local/bin/php %<CR>
 
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+
 nnoremap ; :
 nmap <silent> ,/ :let @/=""<CR>
 
@@ -138,6 +140,7 @@ let NERDTreeShowFiles=1
 let NERDTreeShowHidden=0
 let NERDChristmasTree=1
 let NERDTreeWinSize=40
+let NERDTreeIgnore=['node_modules']
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
 
@@ -181,6 +184,7 @@ endif
 noremap <silent><Leader>/ :nohls<CR>
 noremap <F1> <Esc>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+nnoremap <F3> :let @/ = ""<cr>
 
 
 "UltiSnips Configuration

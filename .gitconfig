@@ -39,6 +39,8 @@
 	excludesfile = /Users/gardnerc/.gitignore
     quotepath = false
 	whitespace = cr-at-eol
+	editor = vim
+	autocrlf = input
 [diff]
     algorithm = patience
 [push]
@@ -48,5 +50,16 @@
 [fetch]
 	recurseSubmodules = false
 	prune = true
-[url "https://"]
-        insteadOf = git://
+[url "ssh://git@stash.cdk.com"]
+	insteadOf = https://stash.cdk.com/scm
+[url "ssh://git@stash.cdk.com"]
+	insteadOf = http://stash.cdk.com/scm
+[url "ssh://git@"]
+	insteadOf = git://
+[rerere]
+	enabled = 1
+[credential]
+	helper = !aws --profile gardnerc_sandbox codecommit credential-helper $@
+	UseHttpPath = true
+[commit]
+    template = ~/src/dotfiles/git/commit-template
