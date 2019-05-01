@@ -10,3 +10,6 @@
 [submodule "zsh/plugins/oh-my-zsh"]
 	path = zsh/plugins/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "zsh/plugins/zsh-touchbar"]
+	path = zsh/plugins/zsh-touchbar
+	url = git@github.com:iam4x/zsh-iterm-touchbar.git
