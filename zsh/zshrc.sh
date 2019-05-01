@@ -1,7 +1,7 @@
 autoload -U compinit
 
-export editor='vim'
-export EDITOR='vim'
+export editor='nvim'
+export EDITOR='nvim'
 
 plugins=(
 	docker
