@@ -1,23 +1,13 @@
 [user]
     name = Craig Gardner
-    mail = craig.gardner@cdk.com
-    email = craig.gardner@cdk.com
 [alias]
     co = checkout
     mrg = merge --no-ff
     ms = merge --squash
     ci = commit -v
     b = branch
-    cl = clean -fd -e .vagrant
+    cl = clean -fd
     diff = diff --ignore-space-at-eol
-
-    # Git Flow Shortcuts
-    ffs = flow feature start
-    ffc = flow feature checkout
-    ffs = flow feature start
-    fff = flow feature finish
-    frs = flow release start
-    frf = flow release finish
 
 # Found these from https://github.com/gabebw/dotfiles/blob/master/gitconfig.erb
     st = status -sb
@@ -36,7 +26,7 @@
 [color]
     ui = auto
 [core]
-	excludesfile = /Users/gardnerc/.gitignore
+	excludesfile = $HOME/src/dotfiles/git/gitignore
     quotepath = false
 	whitespace = cr-at-eol
 	editor = vim
@@ -46,20 +36,11 @@
 [push]
     default = simple
 [init]
-    templatedir = ~/src/dotfiles/repo/git_template
+    templatedir = $HOME/src/dotfiles/git/template
 [fetch]
 	recurseSubmodules = false
 	prune = true
-[url "ssh://git@stash.cdk.com"]
-	insteadOf = https://stash.cdk.com/scm
-[url "ssh://git@stash.cdk.com"]
-	insteadOf = http://stash.cdk.com/scm
 [url "ssh://git@"]
 	insteadOf = git://
-[rerere]
-	enabled = 1
-[credential]
-	helper = !aws --profile gardnerc_sandbox codecommit credential-helper $@
-	UseHttpPath = true
 [commit]
-    template = ~/src/dotfiles/git/commit-template
+    template = $HOME/src/dotfiles/git/commit-template
