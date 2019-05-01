@@ -26,14 +26,13 @@ if dein#load_state('~/.cache/dein')
     \     'unix' : 'gmake',
     \    },
     \ })
-  call dein#add('Valloric/YouCompleteMe', {
-       \ 'build' : {
-       \     'mac' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-       \     'unix' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-       \     'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-       \     'cygwin' : './install.sh --clang-completer --system-libclang --omnisharp-completer'
-       \    }
-       \ })
+
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+	  call dein#add('roxma/nvim-yarp')
+	  call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+  let g:deoplete#enable_at_startup = 1
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
