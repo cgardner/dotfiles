@@ -1,13 +1,16 @@
 #!/bin/bash
-. ./.bashrc
 
-FILES=`find . -name ".*" -d 1 |grep -v '.git'`
-for FILE in $FILES; do
-	REALPATH=`realpath $FILE`
-	FILENAME=`basename $REALPATH`
-	DEST=~/$FILENAME
-	if [ -a $DEST ]; then
-		`mv $DEST $DEST.bak`
-	fi
-	ln -s $REALPATH ~/$FILENAME
-done;
+### VIM SETUP
+# Install Dein for vim
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+# For example, we just use `~/.cache/dein` as installation directory
+sh ./installer.sh ~/.cache/dein && rm ./installer.sh
+
+printf "so $HOME/src/dotfiles/vim/vimrc.vim" > ~/.vimrc
+
+### END VIM SETUP
+
+### TMUX SETUP
+
+printf "source-file $HOME/src/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+### END TMUX SETUP
