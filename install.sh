@@ -7,6 +7,8 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh $HOME/.cache/dein && rm ./installer.sh
 
 printf "so $HOME/src/dotfiles/vim/vimrc.vim" > $HOME/.vimrc
+mkdir -p $HOME/.config/nvim/
+printf "so $HOME/src/dotfiles/vim/vimrc.vim" > $HOME/.config/nvim/init.vim
 
 ### END VIM SETUP
 
