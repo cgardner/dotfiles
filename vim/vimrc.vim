@@ -1,10 +1,8 @@
 source ~/src/dotfiles/vim/plugins.vim
+source ~/src/dotfiles/vim/init.vim
+source ~/src/dotfiles/vim/keys.vim
+
 set nocompatible " This must be first.  it changes other options
-
-let mapleader=","
-
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set backspace=indent,eol,start
 set hidden
