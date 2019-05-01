@@ -34,3 +34,4 @@ source $ZSH_PLUGIN_DIR/zsh-touchbar/zsh-iterm-touchbar.plugin.zsh
 
 source $ZSH_ROOT/aliases.sh
 source $ZSH_ROOT/prompt.sh
+source $ZSH_ROOT/keybindings.sh
