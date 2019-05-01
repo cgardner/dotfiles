@@ -13,6 +13,7 @@ if dein#load_state('~/.cache/dein')
   " Let dein manage dein
   " Required:
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('./plugins/ctrlp')
 
   " Add or remove your plugins here:
   call dein#add('scrooloose/nerdtree', {'on_cmd': 'NERDTreeToggle'})
