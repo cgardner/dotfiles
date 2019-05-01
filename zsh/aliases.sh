@@ -1,4 +1,5 @@
 alias g="git"
+alias mux="tmuxinator"
 alias zref="source $HOME/.zshrc"
 
 ## NODE
