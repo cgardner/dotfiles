@@ -1,6 +1,6 @@
 # /Users/gardnerc/.config/tmuxinator/project.yml
 
-name: project
+name: project-<%= @args[0] %>
 root: ~/src/<%= @args[0] %>
 
 # Optional tmux socket
