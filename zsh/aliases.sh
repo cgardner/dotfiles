@@ -10,6 +10,7 @@ alias upgrayedd='HOMEBREW_INSTALL_CLEANUP=true brew upgrade && brew cask upgrade
 
 ## Tmuxinator
 alias mux="tmuxinator"
-alias p="tmuxinator start project "
+alias muxs="tmuxinator start"
+alias p="tmuxinator start project"
 
 alias pl="ls $HOME/src"
