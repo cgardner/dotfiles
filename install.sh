@@ -14,6 +14,10 @@ printf "so $HOME/src/dotfiles/vim/vimrc.vim" > $HOME/.config/nvim/init.vim
 
 ### TMUX SETUP
 printf "source-file $HOME/src/dotfiles/tmux/tmux.conf" > $HOME/.tmux.conf
+if ! tmuxinator_loc="$(type -p "tmuxinator")" || [[ -z $tmuxinator_loc ]]; then
+    mkdir -p $HOME/.config/tmuxinator
+    cp ./tmux/templates/* $HOME/.config/tmuxinator
+fi
 ### END TMUX SETUP
 
 ### ZSH SETUP
