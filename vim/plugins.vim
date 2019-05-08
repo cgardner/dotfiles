@@ -5,6 +5,7 @@ endif
 
 " Required:
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+let g:dein#types#git#default_protocol='ssh'
 
 " Required:
 if dein#load_state('~/.cache/dein')
