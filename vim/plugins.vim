@@ -59,6 +59,3 @@ syntax enable
 
 "End dein Scripts-------------------------
 
-source ~/src/dotfiles/vim/coc.vim
-source ~/src/dotfiles/vim/ctrlp.vim
-source ~/src/dotfiles/vim/NERDTree.vim
