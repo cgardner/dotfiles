@@ -4,7 +4,6 @@ source ~/src/dotfiles/vim/plugins.vim
 source ~/src/dotfiles/vim/init.vim
 source ~/src/dotfiles/vim/keys.vim
 source ~/src/dotfiles/vim/colors.vim
-source ~/src/dotfiles/vim/NERDTree.vim
 
 if has('gui_running')
 	source ~/src/dotfiles/vim/gui.vim

@@ -14,29 +14,35 @@ if dein#load_state('~/.cache/dein')
   " Let dein manage dein
   " Required:
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('./plugins/ctrlp')
+
+  " fuzzy file search
+  call dein#add('ctrlpvim/ctrlp.vim')
+
+  call dein#add('tpope/vim-surround')
+  call dein#add('tpope/vim-sleuth')
+  call dein#add('tpope/vim-commentary')
+
+  " Filetype plugins
+  call dein#add('fatih/vim-go', {'on_ft': 'go'})
+  call dein#add('hashivim/vim-terraform', {'on_ft': 'tf'}) 
 
   " Add or remove your plugins here:
   call dein#add('scrooloose/nerdtree', {'on_cmd': 'NERDTreeToggle'})
-  call dein#add('Shougo/vimproc', {
-    \ 'build' : {
-    \     'windows' : 'tools\\update-dll-mingw',
-    \     'cygwin' : 'make -f make_cygwin.mak',
-    \     'mac' : 'make -f make_mac.mak',
-    \     'linux' : 'make',
-    \     'unix' : 'gmake',
-    \    },
-    \ })
+  call dein#add('Shougo/vimproc', { 'build' : 'make' })
 
-  call dein#add('Shougo/deoplete.nvim')
+
+  " Autocomplete
+  call dein#add('neoclide/coc.nvim', { 'build': 'yarn install --frozen-lockfile', 'on_cmd': ['CocStart'] }) 
+  " call dein#add('Shougo/deoplete.nvim')
+  " let g:deoplete#enable_at_startup = 1
+
   if !has('nvim')
 	  call dein#add('roxma/nvim-yarp')
 	  call dein#add('roxma/vim-hug-neovim-rpc')
   endif
-  let g:deoplete#enable_at_startup = 1
 
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+  " Deol Terminal plugin
+  call dein#add('Shougo/deol.nvim')
 
   " Required:
   call dein#end()
@@ -45,11 +51,14 @@ endif
 
 " Required:
 filetype plugin indent on
-syntax enable
-
+syntax enable 
 " If you want to install not installed plugins on startup.
 "if dein#check_install()
 "  call dein#install()
 "endif
 
 "End dein Scripts-------------------------
+
+source ~/src/dotfiles/vim/coc.vim
+source ~/src/dotfiles/vim/ctrlp.vim
+source ~/src/dotfiles/vim/NERDTree.vim

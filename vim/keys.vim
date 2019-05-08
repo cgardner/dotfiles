@@ -5,7 +5,11 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Dein
-nmap <silent> <leader>up :call dein#update()<CR>
+nmap <silent> <leader>pu :call dein#update()<CR>
+nmap <silent> <leader>pi :call dein#install()<CR>
+
+" git
+nmap <silent> <leader>ga :Deol -command=git\ add\ \-p -split<CR>
 
 " Easy split navigation
 " http://vimbits.com/bits/10
