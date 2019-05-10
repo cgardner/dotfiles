@@ -16,9 +16,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " fuzzy file search
-  call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('junegunn/fzf.vim')
+  call dein#add('junegunn/fzf', { 'build': './install --all' })
 
   call dein#add('tpope/vim-surround')
+
   call dein#add('tpope/vim-sleuth')
   call dein#add('tpope/vim-commentary')
 

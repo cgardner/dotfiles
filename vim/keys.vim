@@ -8,6 +8,9 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>pu :call dein#update()<CR>
 nmap <silent> <leader>pi :call dein#install()<CR>
 
+" fzf
+nnoremap <C-p> :Files<CR>
+
 " git
 nmap <silent> <leader>ga :Deol -command=git\ add\ \-p -split<CR>
 
