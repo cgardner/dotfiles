@@ -25,6 +25,7 @@ if dein#load_state('~/.cache/dein')
   " Filetype plugins
   call dein#add('fatih/vim-go', {'on_ft': 'go'})
   call dein#add('hashivim/vim-terraform', {'on_ft': 'tf'}) 
+  call dein#add('w0rp/ale')
 
   " Add or remove your plugins here:
   call dein#add('scrooloose/nerdtree', {'on_cmd': 'NERDTreeToggle'})
@@ -32,9 +33,6 @@ if dein#load_state('~/.cache/dein')
 
 
   " Autocomplete
-  call dein#add('neoclide/coc.nvim', { 'build': 'yarn install --frozen-lockfile', 'on_cmd': ['CocStart'] }) 
-  " call dein#add('Shougo/deoplete.nvim')
-  " let g:deoplete#enable_at_startup = 1
 
   if !has('nvim')
 	  call dein#add('roxma/nvim-yarp')
