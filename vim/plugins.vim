@@ -23,8 +23,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-commentary')
 
   " Filetype plugins
-  call dein#add('fatih/vim-go', {'on_ft': 'go'})
-  call dein#add('hashivim/vim-terraform', {'on_ft': 'tf'}) 
+  call dein#add('sheerun/vim-polyglot')
   call dein#add('w0rp/ale')
 
   " Add or remove your plugins here:
