@@ -30,8 +30,17 @@ if dein#load_state('~/.cache/dein')
   call dein#add('scrooloose/nerdtree', {'on_cmd': 'NERDTreeToggle'})
   call dein#add('Shougo/vimproc', { 'build' : 'make' })
 
+  " Markdown
+  call dein#add('suan/vim-instant-markdown', { 
+				\ 'on_ft': 'markdown', 
+				\ 'build': 'npm -g install instant-markdown-d' 
+	\})
 
   " Autocomplete
+  call dein#add('neoclide/coc.nvim', {
+				\ 'build': 'yarn install --frozen-lockfile && coc#util#install()', 
+				\ 'on_cmd': ['CocStart']
+	\}) 
 
   if !has('nvim')
 	  call dein#add('roxma/nvim-yarp')
