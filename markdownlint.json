@@ -1,0 +1,6 @@
+{
+  "base": true,
+  "MD013": {
+    "line-length": 100
+  }
+}
