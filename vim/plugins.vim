@@ -15,6 +15,9 @@ if dein#load_state('~/.cache/dein')
   " Required:
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
+  " git
+  call dein#add('airblade/vim-gitgutter')
+
   " fuzzy file search
   call dein#add('junegunn/fzf.vim')
   call dein#add('junegunn/fzf', { 'build': './install --all' })
