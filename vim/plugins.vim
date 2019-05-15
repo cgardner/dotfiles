@@ -55,6 +55,10 @@ if dein#load_state('~/.cache/dein')
   " Deol Terminal plugin
   call dein#add('Shougo/deol.nvim')
 
+  " pimp my vim
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+
   " Required:
   call dein#end()
   call dein#save_state()
