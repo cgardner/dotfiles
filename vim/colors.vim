@@ -1,5 +1,6 @@
-colorscheme default
+let g:material_style='oceanic'
 set background=dark
+colorscheme vim-material
 hi MatchParen cterm=bold ctermbg=gray ctermfg=black
 
 highlight Comment cterm=italic
@@ -22,6 +23,6 @@ highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 
 " colorize long lines
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%101v.*/
+match OverLength /\%81v.*/
 
 hi CursorLine term=underline cterm=underline

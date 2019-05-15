@@ -6,6 +6,9 @@ if has('gui_running')
 	source ~/src/dotfiles/vim/gui.vim
 endif
 
+set encoding=UTF-8
+set conceallevel=3 " Hide the square brackets from dev icons
+
 set backspace=indent,eol,start
 set hidden
 set tabstop=2
@@ -31,9 +34,7 @@ syntax enable
 
 set laststatus=2
 
-set guifont=Fira\ Code
-
-
+set guifont=Fura\ Code\ Nerd\ Font\ Complete
 
 filetype on
 filetype plugin on

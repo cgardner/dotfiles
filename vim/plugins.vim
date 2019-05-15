@@ -42,10 +42,7 @@ if dein#load_state('~/.cache/dein')
 	\})
 
   " Autocomplete
-  call dein#add('neoclide/coc.nvim', {
-				\ 'build': 'yarn install --frozen-lockfile && coc#util#install()', 
-				\ 'on_cmd': ['CocStart']
-	\}) 
+  call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
 
   if !has('nvim')
 	  call dein#add('roxma/nvim-yarp')
@@ -58,6 +55,8 @@ if dein#load_state('~/.cache/dein')
   " pimp my vim
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('hzchirs/vim-material')
+  call dein#add('ryanoasis/vim-devicons')
 
   " Required:
   call dein#end()
