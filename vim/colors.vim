@@ -1,4 +1,3 @@
-let g:material_style='oceanic'
 set background=dark
 colorscheme vim-material
 hi MatchParen cterm=bold ctermbg=gray ctermfg=black
