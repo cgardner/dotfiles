@@ -29,16 +29,15 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak
 set title
-set ofu=syntaxcomplete#Complete
-syntax enable
-
 set laststatus=2
 
 set guifont=Fura\ Code\ Nerd\ Font\ Complete
 
+syntax on
 filetype on
 filetype plugin on
 filetype indent on
+set termguicolors
 
 autocmd FileType php noremap <M-L> :!/usr/local/bin/php -l %<CR>
 autocmd FileType php noremap <M-M> :w!<CR>:!/usr/local/bin/php %<CR>
