@@ -18,3 +18,8 @@ alias muxs="tmuxinator start"
 alias p="tmuxinator start project"
 
 alias pl="ls $HOME/src"
+
+md() {
+  mkdir -p $1
+  cd $1
+}
