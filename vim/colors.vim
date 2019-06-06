@@ -21,7 +21,7 @@ hi CursorLine   cterm=bold ctermbg=239 guibg=black guifg=white
 highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 
 " colorize long lines
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+highlight OverLength ctermbg=red ctermfg=white guibg=#ee464d
 match OverLength /\%81v.*/
 
 hi CursorLine term=underline cterm=underline
