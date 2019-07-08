@@ -27,6 +27,10 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-sleuth')
   call dein#add('tpope/vim-commentary')
 
+  " Snippets
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+
   " Filetype plugins
   call dein#add('sheerun/vim-polyglot')
   call dein#add('w0rp/ale')
