@@ -27,7 +27,7 @@ ZSH_PLUGIN_DIR="$ZSH_ROOT/plugins"
 
 function load_source() {
   DEBUG=$2
-  #DEBUG=true
+  # DEBUG=true
 
   if [ -z $DEBUG ]; then
     source $1
@@ -50,7 +50,6 @@ done
 
 load_source $ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 load_source $ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH_PLUGIN_DIR/zsh-touchbar/zsh-iterm-touchbar.plugin.zsh
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 load_source $ZSH_ROOT/aliases.sh
