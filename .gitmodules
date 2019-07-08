@@ -16,3 +16,12 @@
 [submodule "zsh/plugins/powerlevel9k"]
 	path = zsh/plugins/powerlevel9k
 	url = git@github.com:bhilburn/powerlevel9k.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "zsh/plugins/powerlevel10k"]
+	path = zsh/plugins/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh/plugins/zsh-prompt-benchmark"]
+	path = zsh/plugins/zsh-prompt-benchmark
+	url = git@github.com:romkatv/zsh-prompt-benchmark.git
