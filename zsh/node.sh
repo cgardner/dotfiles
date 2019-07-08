@@ -1,21 +1,22 @@
 ## NODE
 
 node_docker() {
+  # Allow manual version override
   [ -z "$NODE_VERSION" ] && NODE_VERSION="latest";
-  echo $NODE_VERSION
 
+  # NVM is always more important
   [ -s ".nvmrc" ] && NODE_VERSION=$(cat .nvmrc)
   
-  docker run -it --rm -v $(pwd):/app -w /app node:$NODE_VERSION $@
+  docker run -it --rm -v $(pwd):/app --workdir /app node:$NODE_VERSION $@
 }
-
-npm() {
-  node_docker npm $@
-}
-
-node() {
-  node_docker node $@
-}
+#
+#npm() {
+#  node_docker npm $@
+#}
+#
+#node() {
+#  node_docker node $@
+#}
 
 alias nr="npm run"
 alias ni="npm i"
