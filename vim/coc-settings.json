@@ -1,0 +1,39 @@
+{
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.enableFloatHighlight": true,
+  "coc.preferences.hoverTarget": "float",
+
+  "diagnostic.displayByAle": true,
+
+  "suggest.autoTrigger": "always",
+  "suggest.maxCompleteItemCount": 20,
+
+  "signature.enable": true,
+  "signature.target": "float",
+  "signature.preferShownAbove": true,
+
+  "languageserver": {
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      "filetypes": ["vim", "eruby", "markdown"]
+    },
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"]
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    }
+  },
+
+  "json.enable": true,
+
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.directories": [
+    "~/src/dotfiles/vim/snippets/",
+    "UltiSnips"
+  ]
+}
