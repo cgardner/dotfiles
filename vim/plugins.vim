@@ -45,8 +45,17 @@ if dein#load_state('~/.cache/dein')
 				\ 'build': 'npm -g install instant-markdown-d' 
 	\})
 
+  " OpenAPI Definitions
+  call dein#add('xavierchow/vim-swagger-preview')
+
+  " Sequence Diagrams
+  call dein#add('xavierchow/vim-sequence-diagram')
+
   " Autocomplete
-  call dein#add('neoclide/coc.nvim', {'merge':0, 'build': './install.sh nightly'})
+  call dein#add('neoclide/coc.nvim', { 
+        \ 'merge':0, 
+        \ 'build': './install.sh nightly'
+  \})
 
   if !has('nvim')
 	  call dein#add('roxma/nvim-yarp')
@@ -55,6 +64,10 @@ if dein#load_state('~/.cache/dein')
 
   " Deol Terminal plugin
   call dein#add('Shougo/deol.nvim')
+
+  " Tools
+  call dein#add('terryma/vim-multiple-cursors')
+  call dein#add('mattn/emmet-vim')
 
   " pimp my vim
   call dein#add('vim-airline/vim-airline')
