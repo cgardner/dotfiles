@@ -7,7 +7,7 @@ if has('gui_running')
 endif
 
 set encoding=UTF-8
-set conceallevel=3 " Hide the square brackets from dev icons
+set conceallevel=0 " Hide the square brackets from dev icons
 
 set backspace=indent,eol,start
 set hidden
@@ -39,8 +39,6 @@ filetype plugin on
 filetype indent on
 set termguicolors
 
-autocmd FileType php noremap <M-L> :!/usr/local/bin/php -l %<CR>
-autocmd FileType php noremap <M-M> :w!<CR>:!/usr/local/bin/php %<CR>
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 set number " show line numbers
@@ -50,10 +48,10 @@ set nolist  " list disables linebreak
 set textwidth=0 " prevent newlines when wrapping
 set wrapmargin=0 " prevent newlines when wrapping
 
+set foldmethod=syntax
+
 autocmd! bufwritepost .vimrc source %
 source ~/src/dotfiles/vim/init.vim
 source ~/src/dotfiles/vim/keys.vim
-source ~/src/dotfiles/vim/colors.vim
 source ~/src/dotfiles/vim/plugins/config.vim
-
-
+source ~/src/dotfiles/vim/colors.vim
