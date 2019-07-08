@@ -63,3 +63,6 @@ noremap <F1> <Esc>
 
 " So I don't have to press shift to run a command
 nnoremap ; :
+
+" code folding
+nmap <silent> + za
