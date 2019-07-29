@@ -32,6 +32,7 @@ Plug 'mattn/emmet-vim'
 
 " pimp my vim
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
