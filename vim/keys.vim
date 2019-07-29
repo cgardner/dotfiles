@@ -56,3 +56,6 @@ nnoremap ; :
 
 " code folding
 nmap <silent> + za
+
+" Conceal toggle
+nnoremap coe :set <C-R>=&conceallevel ? 'conceallevel=0' : 'conceallevel=3'<CR><CR>
