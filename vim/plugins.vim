@@ -11,7 +11,6 @@ Plug 'junegunn/fzf.vim'
 " Language and Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-
 " Markdown
 Plug 'suan/vim-instant-markdown', { 
 	 \ 'for': 'markdown', 
@@ -23,10 +22,9 @@ Plug 'xavierchow/vim-sequence-diagram'
 
 " Autocomplete
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'neoclide/coc.nvim', {
-"   \ 'tag': '*', 
-"   \ 'do': 'yarn install --frozen-lockfile'
-" \}
+Plug 'neoclide/coc.nvim', {
+  \ 'do': 'yarn install --frozen-lockfile'
+\}
 
 " Tools
 Plug 'terryma/vim-multiple-cursors'
