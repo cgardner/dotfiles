@@ -24,3 +24,5 @@ let g:ale_yaml_swaglint_use_global = 1
 " Markdown
 let g:ale_linters['markdown'] = ['markdownlint', 'write-good']
 let g:ale_fixers['markdown'] = ['prettier']
+
+nnoremap <silent> <leader>tas :ALEToggle<CR>
