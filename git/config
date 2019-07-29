@@ -29,7 +29,7 @@
 	excludesfile = ~/src/dotfiles/git/gitignore
     quotepath = false
 	whitespace = cr-at-eol
-	editor = vim
+	editor = nvim
 	autocrlf = input
 [diff]
     algorithm = patience
