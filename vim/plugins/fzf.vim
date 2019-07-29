@@ -1,1 +1,1 @@
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :call fzf#run({'source': 'fd', 'sink': 'e'})<CR>
