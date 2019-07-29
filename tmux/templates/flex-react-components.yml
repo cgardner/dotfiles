@@ -1,7 +1,7 @@
 # /Users/gardnerc/.config/tmuxinator/project.yml
 
-name: <%= @args[0] %>
-root: ~/src/<%= @args[0] %>
+name: flex-react-components
+root: ~/src/flex-react-components
 
 # Optional tmux socket
 # socket_name: foo
@@ -41,4 +41,4 @@ root: ~/src/<%= @args[0] %>
 
 windows:
   - editor: $EDITOR
-  - terminal:
+  - terminal: nvm use
