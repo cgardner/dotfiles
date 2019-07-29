@@ -2,7 +2,7 @@ alias g="git"
 alias zref="source $HOME/.zshrc"
 
 ## UPGRAYEDD
-alias upgrayedd='brew upgrade && brew cask upgrade && brew cleanup && mas upgrade && nvim -c "call dein#update()" -c "q!"' 
+alias upgrayedd='brew upgrade && brew cask upgrade && brew cleanup && mas upgrade && nvim -c "PlugUpdate" -c "PlugUpgrade" -c "qa!"' 
 ## Tmuxinator
 alias mux="tmuxinator"
 alias muxs="tmuxinator start"
