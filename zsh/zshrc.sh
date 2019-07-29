@@ -56,3 +56,4 @@ load_source $ZSH_ROOT/aliases.sh
 load_source $ZSH_ROOT/prompt.sh
 load_source $ZSH_ROOT/keybindings.sh
 load_source $ZSH_ROOT/node.sh
+load_source $ZSH_ROOT/variables.sh
