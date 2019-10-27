@@ -39,6 +39,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'hzchirs/vim-material'
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'godlygeek/tabular'
+
 call plug#end()
 
 filetype plugin indent on
