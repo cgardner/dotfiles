@@ -42,6 +42,8 @@ set termguicolors
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 set number " show line numbers
+set relativenumber
+set scrolloff=999 " Keep cursor centered
 set wrap " enable soft wrap
 set linebreak
 set nolist  " list disables linebreak
