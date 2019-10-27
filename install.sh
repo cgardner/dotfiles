@@ -23,3 +23,7 @@ fi
 ### ZSH SETUP
 printf "source $HOME/src/dotfiles/zsh/zshrc-manager.sh" > $HOME/.zshrc
 ### END ZSH SETUP
+
+### TASKWARRIOR SETUP
+ln -s $HOME/src/dotfiles/task/taskrc $HOME/.taskrc
+### END TASKWARRIOR SETUP
