@@ -31,12 +31,12 @@ set wildignore=*.swp,*.bak
 set title
 set laststatus=2
 
-set guifont=Fura\ Code\ Nerd\ Font\ Complete
 
-syntax on
+set guifont=FuraCode\ Nerd\ Font
+
+syntax enable
 filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 set termguicolors
 
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
