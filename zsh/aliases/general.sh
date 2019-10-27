@@ -2,12 +2,17 @@ alias g="git"
 alias zref="source $HOME/.zshrc"
 
 ## UPGRAYEDD
-alias upgrayedd='brew upgrade && brew cask upgrade && brew cleanup && mas upgrade && nvim -c "PlugUpdate" -c "PlugUpgrade" -c "qa!"' 
+alias upgrayedd='brew upgrade &&\ 
+  brew cask upgrade &&\ 
+  brew cleanup &&\ 
+  nvim -c "PlugUpdate" -c "PlugUpgrade" -c "qa!" &&\ 
+  npm-check -y -g' 
 
 ## Tmuxinator
 alias mux="tmuxinator"
 alias muxs="tmuxinator start"
-alias p="tmuxinator start project"
+alias p="tmuxinator start project $HOME/src/"
+alias dp="tmuxinator start project "
 
 alias tf="terraform"
 
