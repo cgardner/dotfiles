@@ -44,6 +44,22 @@ function load_source() {
   echo $elapsed":" $sourceFile
 }
 
+function load_dir() {
+  LOAD_PATH=$1
+  DEBUG=false
+  if [ -z $2 ]; then
+    DEBUG=$2
+  fi
+
+  for filename ($(find $LOAD_PATH -name "*.sh")); do
+    load_source $filename $DEBUG
+  done
+}
+
+
+load_dir $ZSH_ROOT/config
+load_dir $ZSH_ROOT/aliases
+
 for lib ($zsh_lib); do
   load_source $ZSH_PLUGIN_DIR/oh-my-zsh/lib/$lib.zsh
 done
@@ -52,7 +68,6 @@ load_source $ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 load_source $ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-load_source $ZSH_ROOT/aliases.sh
 load_source $ZSH_ROOT/prompt.sh
 load_source $ZSH_ROOT/keybindings.sh
 load_source $ZSH_ROOT/node.sh
