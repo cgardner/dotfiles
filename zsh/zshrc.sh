@@ -73,3 +73,5 @@ load_source $ZSH_ROOT/keybindings.sh
 load_source $ZSH_ROOT/node.sh
 load_source $ZSH_ROOT/variables.sh
 load_source $ZSH_ROOT/bell.sh
+
+antibody bundle < $ZSH_ROOT/zsh_plugins.txt
