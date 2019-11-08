@@ -1,0 +1,21 @@
+[general]
+# GIT
+"git/config" = "~/.gitconfig"
+
+# TASKWARRIOR
+"task/taskrc"   = "~/.taskrc"
+"task/taskhelper.yaml" = "~/.config/taskhelper/taskhelper.yaml"
+
+[macos]
+# VIM
+"vim/vimrc.vim"         = "~/.config/nvim/init.vim"
+"vim/coc-settings.json" = "~/.config/nvim/coc-settings.json"
+"zsh/zshrc-manager.sh"  = "~/.zshrc"
+
+# ALACRITTY
+"term/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
+
+# TMUX
+"tmux/tmux.conf" = "~/.tmux.conf"
+"tmux/templates/project.yml" = "~/.tmuxinator/project.yml"
+"tmux/templates/dotfiles.yml" = "~/.tmuxinator/dotfiles.yml"
