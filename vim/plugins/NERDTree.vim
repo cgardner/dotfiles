@@ -8,6 +8,7 @@ let NERDTreeShowFiles=1
 let NERDTreeShowHidden=0
 let NERDChristmasTree=1
 let NERDTreeWinSize=40
+let NERDTreeWinSizeMax=40
 let NERDTreeIgnore=['node_modules']
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
