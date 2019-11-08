@@ -3,12 +3,12 @@
 "git/config" = "~/.gitconfig"
 
 # TASKWARRIOR
-"task/taskrc"   = "~/.taskrc"
+"task/taskrc"          = "~/.taskrc"
 "task/taskhelper.yaml" = "~/.config/taskhelper/taskhelper.yaml"
 
 # VIM
-"vim/nviminit.vim"         = "~/.config/nvim/init.vim"
-"vim/vimrc.vim" 	= "~/.vimrc"
+"vim/nviminit.vim"      = "~/.config/nvim/init.vim"
+"vim/vimrc.vim"         = "~/.vimrc"
 "vim/coc-settings.json" = "~/.config/nvim/coc-settings.json"
 "zsh/zshrc-manager.sh"  = "~/.zshrc"
 
@@ -16,6 +16,6 @@
 "term/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
 
 # TMUX
-"tmux/tmux.conf" = "~/.tmux.conf"
-"tmux/templates/project.yml" = "~/.tmuxinator/project.yml"
+"tmux/tmux.conf"              = "~/.tmux.conf"
+"tmux/templates/project.yml"  = "~/.tmuxinator/project.yml"
 "tmux/templates/dotfiles.yml" = "~/.tmuxinator/dotfiles.yml"
