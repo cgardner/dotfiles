@@ -6,9 +6,9 @@
 "task/taskrc"   = "~/.taskrc"
 "task/taskhelper.yaml" = "~/.config/taskhelper/taskhelper.yaml"
 
-[macos]
 # VIM
-"vim/vimrc.vim"         = "~/.config/nvim/init.vim"
+"vim/nviminit.vim"         = "~/.config/nvim/init.vim"
+"vim/vimrc.vim" 	= "~/.vimrc"
 "vim/coc-settings.json" = "~/.config/nvim/coc-settings.json"
 "zsh/zshrc-manager.sh"  = "~/.zshrc"
 
