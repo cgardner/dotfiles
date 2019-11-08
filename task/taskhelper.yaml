@@ -1,0 +1,45 @@
+in:
+  add: +in
+  report: inbox
+greg:
+  add:
+    - +work 
+    - proj:"1:1 > Greg"
+  report: 
+    - proj:"1:1 > Greg"
+    - talking-points
+northon:
+  add:
+    - +work 
+    - proj:"1:1 > Northon"
+  report: 
+    - proj:"1:1 > Northon"
+    - talking-points
+rethink:
+  add:
+    - proj:"Athena > Implementation Re-Think"
+    - +work
+    - +@computer
+  report: athena
+taskhelper:
+  add: 
+    - proj:"TaskHelper"
+amplitude:
+  add:
+    - proj:"Drive Flex > Amplitude" 
+    - +work 
+    - +@computer
+  report: 
+    - proj:"Drive Flex > Amplitude" 
+    - next
+india:
+  add:
+    - proj:"India Trip"
+    - +work
+    - +@email
+  report:
+    - proj:"India Trip"
+    - talking-points
+work:
+  add:
+    - +work
