@@ -23,7 +23,6 @@ let g:ale_yaml_swaglint_use_global = 1
 
 " Markdown
 let g:ale_linters['markdown'] = ['markdownlint']
-let g:ale_fixers['markdown'] = ['prettier']
 
 " Terraform
 let g:ale_fixers['tf'] = ['terraform']

@@ -29,6 +29,7 @@ Plug 'neoclide/coc.nvim', {
 " Tools
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
+Plug 'yegappan/mru'
 
 " pimp my vim
 Plug 'tpope/vim-commentary'

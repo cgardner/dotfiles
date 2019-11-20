@@ -1,6 +1,6 @@
 in:
   add: +in
-  report: inbox
+  report: in
 greg:
   add:
     - +work 

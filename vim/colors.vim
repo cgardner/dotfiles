@@ -14,6 +14,7 @@ augroup CursorLine
 	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
 	au winLeave * setlocal nocursorline nocursorcolumn
 augroup END
+highlight Normal guibg=black
 
 hi CursorLine   cterm=bold ctermbg=239 guibg=black guifg=white
 " terminal cursor colors

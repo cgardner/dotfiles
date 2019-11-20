@@ -11,7 +11,7 @@ alias upgrayedd='brew upgrade &&\
 ## Tmuxinator
 alias mux="tmuxinator"
 alias muxs="tmuxinator start"
-alias p="tmuxinator start project $HOME/src/"
+alias p="tmuxinator start project"
 alias dp="tmuxinator start project "
 
 alias tf="terraform"

@@ -1,13 +1,14 @@
 adr-tools
 curl
 git
-git-flow-avh
 jenv
 maven
 node
 nvm
+
+neovim
 tmux
 vim
-wget
-write-good
+
 zsh
+wget
