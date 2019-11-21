@@ -5,10 +5,15 @@ jenv
 maven
 node
 nvm
+task
 
 neovim
 tmux
-vim
+tmuxinator
 
 zsh
+antibody
 wget
+
+go
+rust

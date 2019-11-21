@@ -20,7 +20,7 @@ zsh_lib=(
 
 compinit
 
-PATH="./node_modules/.bin:/usr/local/sbin:/usr/local/bin:$PATH"
+PATH="./node_modules/.bin:/usr/local/sbin:/usr/local/bin:$PATH:$HOME/go/bin:$HOME/.cargo/bin"
 
 ZSH_ROOT="$HOME/.dotfiles/zsh"
 ZSH_PLUGIN_DIR="$ZSH_ROOT/plugins"
