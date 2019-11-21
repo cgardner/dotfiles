@@ -5,6 +5,7 @@
 # TASKWARRIOR
 "task/taskrc"          = "~/.taskrc"
 "task/taskhelper.yaml" = "~/.config/taskhelper/taskhelper.yaml"
+"task/hooks/on-exit"         = "~/.task/hooks/on-exit"
 
 # VIM
 "vim/nviminit.vim"      = "~/.config/nvim/init.vim"
