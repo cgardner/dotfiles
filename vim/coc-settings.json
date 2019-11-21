@@ -33,7 +33,7 @@
 
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.directories": [
-    "~/src/dotfiles/vim/snippets/",
+    "~/.dotfiles/vim/snippets/",
     "UltiSnips"
   ]
 }

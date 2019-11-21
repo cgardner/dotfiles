@@ -27,7 +27,7 @@
 [color]
     ui = auto
 [core]
-	excludesfile = ~/src/dotfiles/git/gitignore
+	excludesfile = ~/.dotfiles/git/gitignore
     quotepath = false
 	whitespace = cr-at-eol
 	editor = nvim
@@ -37,11 +37,11 @@
 [push]
     default = simple
 [init]
-    templatedir = ~/src/dotfiles/git/template
+    templatedir = ~/.dotfiles/git/template
 [fetch]
 	recurseSubmodules = false
 	prune = true
 [url "ssh://git@"]
 	insteadOf = git://
 [commit]
-    template = ~/src/dotfiles/git/commit-template
+    template = ~/.dotfiles/git/commit-template

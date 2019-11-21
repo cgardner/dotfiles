@@ -8,7 +8,7 @@ plugins=(
 )
 
 for plugin ($plugins); do
-    fpath=(~/dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
+    fpath=(~/.dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
 done
 
 zsh_lib=(
@@ -22,7 +22,7 @@ compinit
 
 PATH="./node_modules/.bin:/usr/local/sbin:/usr/local/bin:$PATH"
 
-ZSH_ROOT="$HOME/src/dotfiles/zsh"
+ZSH_ROOT="$HOME/.dotfiles/zsh"
 ZSH_PLUGIN_DIR="$ZSH_ROOT/plugins"
 
 function load_source() {

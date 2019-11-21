@@ -1,7 +1,7 @@
 # /Users/gardnerc/.config/tmuxinator/dotfiles.yml
 
 name: dotfiles
-root: ~/src/dotfiles
+root: ~/.dotfiles
 
 # Optional tmux socket
 # socket_name: foo
