@@ -8,6 +8,9 @@ nvm
 task
 
 neovim
+fzf
+gopass
+
 tmux
 tmuxinator
 
