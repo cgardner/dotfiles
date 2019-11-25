@@ -36,3 +36,4 @@ include ~/.dotfiles/task/intheam.conf
 
 context.work = +work
 context.home = +home
+context.email = +@email
