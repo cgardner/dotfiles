@@ -1,47 +1,46 @@
 [user]
-    name = Craig Gardner
-    email = craig.s.gardner@gmail.com
+  name = Craig Gardner
+  email = craig.s.gardner@gmail.com
 [alias]
-    co = checkout
-    mrg = merge --no-ff
-    ms = merge --squash
-    ci = commit -v
-    b = branch
-    cl = clean -fd
-    diff = diff --ignore-space-at-eol
+  co   = checkout
+  mrg  = merge --no-ff
+  ms   = merge --squash
+  ci   = commit -v
+  b    = branch
+  cl   = clean -fd
+  diff = diff --ignore-space-at-eol
 
 # Found these from https://github.com/gabebw/dotfiles/blob/master/gitconfig.erb
-    st = status -sb
-    tst = status -sb # this + "gi" = spell correction
-    lol = log --graph --all --pretty=format:'%Cred%h%Creset %Cblue%an%Creset: %s -%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-    assume   = update-index --assume-unchanged
-    unassume = update-index --no-assume-unchanged
-    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
-    snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
-    a = add -p
-    up = !git fetch upstream && git pull --rebase upstream master
-    update = !git fetch && git pull --rebase
-    bd = branch -d
-    news = log -p HEAD@{1}..HEAD@{0}
-    pt = !git tag -l | xargs git tag -d && git fetch -t
+  st       = status -sb
+  lol      = log --graph --all --pretty=format:'%Cred%h%Creset %Cblue%an%Creset: %s -%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  assume   = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+  a        = add -p
+  up       = !git fetch upstream && git pull --rebase upstream master
+  update   = !git fetch && git pull --rebase
+  bd       = branch -d
+  news     = log -p HEAD@{1}..HEAD@{0}
+  pt       = !git tag -l | xargs git tag -d && git fetch -t
 [color]
-    ui = auto
+  ui = auto
 [core]
 	excludesfile = ~/.dotfiles/git/gitignore
-    quotepath = false
-	whitespace = cr-at-eol
-	editor = nvim
-	autocrlf = input
+  quotepath    = false
+	whitespace   = cr-at-eol
+	editor       = nvim
+	autocrlf     = input
 [diff]
-    algorithm = patience
+  algorithm = patience
 [push]
-    default = simple
+  default = simple
 [init]
-    templatedir = ~/.dotfiles/git/template
+  templatedir = ~/.dotfiles/git/template
 [fetch]
 	recurseSubmodules = false
-	prune = true
+	prune             = true
 [url "ssh://git@"]
 	insteadOf = git://
 [commit]
-    template = ~/.dotfiles/git/commit-template
+  template = ~/.dotfiles/git/commit-template
