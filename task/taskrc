@@ -32,7 +32,6 @@ include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-blue-256.theme
 include ~/.dotfiles/task/attributes.conf
 include ~/.dotfiles/task/inbox.conf
 include ~/.dotfiles/task/reports.conf
-include ~/.dotfiles/task/intheam.conf
 
 context.work = +work
 context.home = +home
