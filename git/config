@@ -44,3 +44,5 @@
   insteadOf = git://
 [commit]
   template = ~/.dotfiles/git/commit-template
+[gpg]
+  program = gpg
