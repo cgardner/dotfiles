@@ -26,11 +26,11 @@
 [color]
   ui = auto
 [core]
-	excludesfile = ~/.dotfiles/git/gitignore
+  excludesfile = ~/.dotfiles/git/gitignore
   quotepath    = false
-	whitespace   = cr-at-eol
-	editor       = nvim
-	autocrlf     = input
+  whitespace   = cr-at-eol
+  editor       = nvim
+  autocrlf     = input
 [diff]
   algorithm = patience
 [push]
@@ -38,9 +38,9 @@
 [init]
   templatedir = ~/.dotfiles/git/template
 [fetch]
-	recurseSubmodules = false
-	prune             = true
+  recurseSubmodules = false
+  prune             = true
 [url "ssh://git@"]
-	insteadOf = git://
+  insteadOf = git://
 [commit]
   template = ~/.dotfiles/git/commit-template
