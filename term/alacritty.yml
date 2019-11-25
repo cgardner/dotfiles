@@ -32,4 +32,4 @@ shell:
   program: /usr/local/bin/zsh
 
 scrolling:
-  faux_multiplier: 0
+  multiplier: 0
