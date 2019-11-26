@@ -23,6 +23,7 @@ const changeCommands = [
   "denotate",
   "done",
   "duplicate",
+  "edit",
   "import",
   "modify",
   "prepend",
