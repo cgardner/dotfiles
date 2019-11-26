@@ -52,7 +52,13 @@ const Task = ({ task, index }) => {
   );
 };
 
-export const render = ({ output }) => {
+export const render = ({ output, error, ...props }) => {
+  if (error) {
+    return (<div className={messageClass}>{error}</div>);
+  }
+  if (output === undefined) {
+    return (<div className={messageClass}>Failed to load tasks</div>);
+  }
   const jsonOutput = JSON.parse(output)
     .filter(task => task.status === "pending")
     .sort(sort)
@@ -77,6 +83,12 @@ export const render = ({ output }) => {
     </table>
   );
 };
+
+const messageClass = css`
+  color: #FFF;
+  font-family: "Roboto";
+  font-size: 24pt;
+`
 
 const tableClass = css`
   color: #eee;

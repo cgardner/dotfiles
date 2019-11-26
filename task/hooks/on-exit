@@ -56,5 +56,5 @@ stderr : ${stderr}`);
 };
 const git = exec("which", "git").trim();
 const commit = exec(`${git} commit -am "Updated Tasks"`);
-const push = exec(git, "push origin master");
+const push = exec(`${git} push origin master`);
 console.log("synced to git");
