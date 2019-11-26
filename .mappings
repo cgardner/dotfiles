@@ -1,6 +1,7 @@
 [general]
 # GIT
 "git/config" = "~/.gitconfig"
+"git/template/hooks/commit-msg" = "~/.dotfiles/.git/hooks/commit-msg"
 
 # TASKWARRIOR
 "task/taskrc"          = "~/.taskrc"
