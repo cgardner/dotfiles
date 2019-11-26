@@ -43,3 +43,10 @@ india:
 work:
   add:
     - +work
+monitoring:
+  add:
+    - proj:"Monitoring"
+    - +work
+    - +@computer
+  report:
+    - proj:"Monitoring"
