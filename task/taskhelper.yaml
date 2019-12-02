@@ -39,6 +39,13 @@ emerge:
     - proj:"Emerge"
   report:
     - proj:"Emerge"
+northbay:
+  add:
+    - +work
+    - +@computer
+    - proj:"NorthBay"
+  report:
+    - proj:"NorthBay"
 india:
   add:
     - proj:"India Trip"
