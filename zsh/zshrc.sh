@@ -1,29 +1,18 @@
+PATH="./node_modules/.bin:/usr/local/sbin:/usr/local/bin:$PATH:$HOME/go/bin:$HOME/.cargo/bin"
+
+ZSH_ROOT="$HOME/.dotfiles/zsh"
+ZSH_PLUGIN_DIR="$ZSH_ROOT/plugins"
+
+source <(antibody init)
+antibody bundle < $ZSH_ROOT/zsh_plugins.txt
+
 autoload -U compinit
 
 export editor='nvim'
 export EDITOR='nvim'
 
-plugins=(
-	docker
-)
-
-for plugin ($plugins); do
-    fpath=(~/.dotfiles/zsh/plugins/oh-my-zsh/plugins/$plugin $fpath)
-done
-
-zsh_lib=(
-  git
-  history
-  completion
-  key-bindings
-)
-
 compinit
 
-PATH="./node_modules/.bin:/usr/local/sbin:/usr/local/bin:$PATH:$HOME/go/bin:$HOME/.cargo/bin"
-
-ZSH_ROOT="$HOME/.dotfiles/zsh"
-ZSH_PLUGIN_DIR="$ZSH_ROOT/plugins"
 
 function load_source() {
   DEBUG=$2
@@ -60,13 +49,18 @@ function load_dir() {
 load_dir $ZSH_ROOT/config
 load_dir $ZSH_ROOT/aliases
 
-for lib ($zsh_lib); do
-  load_source $ZSH_PLUGIN_DIR/oh-my-zsh/lib/$lib.zsh
-done
+# zsh_lib=(
+#   git
+#   history
+#   completion
+#   key-bindings
+# )
+# for lib ($zsh_lib); do
+#   load_source $ZSH_PLUGIN_DIR/oh-my-zsh/lib/$lib.zsh
+# done
 
-load_source $ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
-load_source $ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# load_source $ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+# load_source $ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 load_source $ZSH_ROOT/prompt.sh
 load_source $ZSH_ROOT/keybindings.sh
@@ -74,4 +68,3 @@ load_source $ZSH_ROOT/node.sh
 load_source $ZSH_ROOT/variables.sh
 load_source $ZSH_ROOT/bell.sh
 
-antibody bundle < $ZSH_ROOT/zsh_plugins.txt
