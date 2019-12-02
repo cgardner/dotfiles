@@ -1,0 +1,33 @@
+# make mutt aware to use gpg
+source ~/.dotfiles/mutt/gpg.rc
+
+# use program "pass" to handle and decrypt passwords
+set my_pass = `gopass show home/gmail/mutt`
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+set from = craig.s.gardner@gmail.com
+
+# Imap settings
+set folder = imaps://imap.gmail.com:993
+set imap_user = craig.s.gardner@gmail.com
+set imap_pass = $my_pass
+set spoolfile = "+INBOX"
+set postponed = "+[Google Mail]/Drafts"
+set trash = "+Trash"
+unset imap_passive
+
+# SMTP
+set smtp_url = smtps://craig.s.gardner@smtp.gmail.com:465/
+set smtp_pass = $my_pass # use the same password as for IMAP
+set smtp_authenticators = 'gssapi:login'
+
+# virtual-mailboxes "My INBOX" "notmuch://?query=tag:inbox"
+#
+auto_view text/html                                  # view html automatically
+alternative_order text/plain text/enriched text/html # save html for last
+
+source ~/.dotfiles/mutt/layout
+source ~/.dotfiles/mutt/keymaps
+source ~/.dotfiles/mutt/colors

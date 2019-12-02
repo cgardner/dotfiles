@@ -1,0 +1,22 @@
+source ~/.dotfiles/mutt/keys/vim
+
+bind index <Return> display-message
+
+bind index ^R imap-fetch-mail
+
+bind index,pager ,n sidebar-toggle-visible
+
+bind index,pager gn next-unread
+bind index,pager gp previous-unread
+
+bind pager <Down> next-line
+bind pager <Up> previous-line
+bind pager <Right> next-entry
+bind pager <left> previous-entry
+
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+bind attach <return>    view-mailcap
+
+# vim: syntax=neomuttrc
+

@@ -1,0 +1,15 @@
+# Layout
+set index_format="%4C %M %{%b %d} %-15.15L - %s"
+
+# Threading
+set sort = threads
+set collapse_all = yes
+
+# Sidebar
+# set sidebar_visible = yes
+set sidebar_width = 20
+
+# Pager
+set markers = off
+
+# vim: syntax=neomuttrc
