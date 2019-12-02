@@ -17,6 +17,14 @@ northon:
   report: 
     - proj:"1:1 > Northon"
     - talking-points
+robert:
+  add:
+    - +work 
+    - proj:"1:1 > Robert"
+    - priority:L
+  report: 
+    - proj:"1:1 > Robert"
+    - talking-points
 rethink:
   add:
     - proj:"Athena > Implementation Re-Think"
