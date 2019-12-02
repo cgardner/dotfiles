@@ -1,0 +1,14 @@
+
+# Allowed Types:
+#  - build
+#  - chore
+#  - ci
+#  - docs
+#  - feat
+#  - fix
+#  - improvement
+#  - perf
+#  - refactor
+#  - revert
+#  - style
+#  - test
