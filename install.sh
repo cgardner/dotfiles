@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 brew install rust
 cargo install --git https://github.com/ubnt-intrepid/dot.git
