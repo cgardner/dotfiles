@@ -10,6 +10,7 @@ let g:ale_writegood_use_global=1
 " Javascript
 let g:ale_linters['javascript'] = ['eslint']
 let g:ale_fixers['javascript'] = ['eslint', 'prettier']
+let g:ale_fixers['javascriptreact'] = ['prettier']
 let g:ale_javascript_eslint_use_global = 1
 let g:ale_javascript_eslint_executable = 'eslint'
 let g:ale_javascript_eslint_options = '--config ~/.dotfiles/.eslintrc.js'
