@@ -5,6 +5,7 @@ greg:
   add:
     - +work 
     - proj:"1:1 > Greg"
+    - priority:L
   report: 
     - proj:"1:1 > Greg"
     - talking-points
@@ -12,6 +13,7 @@ northon:
   add:
     - +work 
     - proj:"1:1 > Northon"
+    - priority:L
   report: 
     - proj:"1:1 > Northon"
     - talking-points
