@@ -1,6 +1,15 @@
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver'
+  \ 'coc-eslint'
+  \ 'coc-prettier'
+  \ 'coc-json'
+ \ ]
+
 let g:coc_node_path = "/usr/local/bin/node"
 
 inoremap <silent><expr> <TAB>
