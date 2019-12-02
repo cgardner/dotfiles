@@ -24,3 +24,7 @@
 
 # Ubersicht
 "ubersicht/task.jsx" = "~/Library/Application Support/Übersicht/widgets/task.jsx"
+
+# Mutt
+"mutt/muttrc" = "~/.muttrc"
+"mutt/mailcap" = "~/.mailcap"
