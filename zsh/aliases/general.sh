@@ -28,3 +28,7 @@ c() {
   ls
 }
 alias cd="c"
+
+mdown() {
+  pandoc "$1" | w3m -T text/html
+}
