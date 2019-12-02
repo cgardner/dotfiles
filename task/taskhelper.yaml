@@ -32,6 +32,13 @@ amplitude:
   report: 
     - proj:"Drive Flex > Amplitude" 
     - next
+emerge:
+  add:
+    - +work
+    - +@computer
+    - proj:"Emerge"
+  report:
+    - proj:"Emerge"
 india:
   add:
     - proj:"India Trip"
