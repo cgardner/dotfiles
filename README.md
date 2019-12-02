@@ -17,14 +17,19 @@ gpg --import /path/to/key.asc
 #### Signing Commits
 
 1. Get the list of keys
+
     ```bash
     gpg --list-keys
     ```
+
 2. Tell git which key to use to sign commits
+
     ```bash
     git config --global user.signingkey ABC123
     ```
+
 3. Tell git to automatically sign commits
+
     ```bash
     git config commit.gpgsign true
     ```
