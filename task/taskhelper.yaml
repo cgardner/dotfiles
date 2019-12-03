@@ -74,3 +74,11 @@ monitoring:
     - +@computer
   report:
     - proj:"Monitoring"
+outages:
+  add:
+    - proj:"Outages"
+    - +work
+    - +@computer
+    - pri:H
+  report:
+    - proj:"Outages"
