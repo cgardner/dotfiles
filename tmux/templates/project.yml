@@ -1,6 +1,6 @@
 # /Users/gardnerc/.config/tmuxinator/project.yml
 
-name: <%= @args[0] %>
+name: <%= @args[0].gsub(".", "_") %>
 root: ~/src/<%= @args[0] %>
 
 # Optional tmux socket
