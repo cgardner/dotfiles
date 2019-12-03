@@ -21,6 +21,7 @@
 "tmux/tmux.conf"              = "~/.tmux.conf"
 "tmux/templates/project.yml"  = "~/.tmuxinator/project.yml"
 "tmux/templates/dotfiles.yml" = "~/.tmuxinator/dotfiles.yml"
+"tmux/templates/comms.yml"    = "~/.tmuxinator/comms.yml"
 
 # Ubersicht
 "ubersicht/task.jsx" = "~/Library/Application Support/Übersicht/widgets/task.jsx"
