@@ -1,9 +1,9 @@
 set nocompatible " This must be first.  it changes other options
 
-source ~/src/dotfiles/vim/plugins.vim
+source ~/.dotfiles/vim/plugins.vim
 
 if has('gui_running')
-	source ~/src/dotfiles/vim/gui.vim
+	source ~/.dotfiles/vim/gui.vim
 endif
 
 set encoding=UTF-8
@@ -53,7 +53,7 @@ set wrapmargin=0 " prevent newlines when wrapping
 set foldmethod=syntax
 
 autocmd! bufwritepost .vimrc source %
-source ~/src/dotfiles/vim/init.vim
-source ~/src/dotfiles/vim/keys.vim
-source ~/src/dotfiles/vim/plugins/config.vim
-source ~/src/dotfiles/vim/colors.vim
+source ~/.dotfiles/vim/init.vim
+source ~/.dotfiles/vim/keys.vim
+source ~/.dotfiles/vim/plugins/config.vim
+source ~/.dotfiles/vim/colors.vim
