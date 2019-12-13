@@ -2,10 +2,10 @@ alias g="git"
 alias zref="source $HOME/.zshrc"
 
 ## UPGRAYEDD
-alias upgrayedd='brew upgrade &&\ 
-  brew cask upgrade &&\ 
-  brew cleanup &&\ 
-  nvim -c "PlugUpdate" -c "PlugUpgrade" -c "qa!" &&\ 
+alias upgrayedd='brew upgrade && \
+  brew cask upgrade && \
+  brew cleanup && \
+  nvim -c "PlugUpdate" -c "PlugUpgrade" -c "qa!" && \
   npm-check -y -g' 
 
 ## Tmuxinator
