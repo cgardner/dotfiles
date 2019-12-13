@@ -42,4 +42,6 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'godlygeek/tabular'
 
+Plug 'pedrohdz/vim-yaml-folds'
+
 call plug#end()
