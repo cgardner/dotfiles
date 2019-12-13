@@ -82,3 +82,17 @@ outages:
     - pri:H
   report:
     - proj:"Outages"
+flex:
+  add: 
+    - proj:"Drive Flex"
+    - +work
+    - +@computer
+  report:
+    - proj:"Outages"
+ideas:
+  add:
+    - proj:"Ideas"
+    - +work
+    - +someday
+  report:
+    - proj:"Ideas"
