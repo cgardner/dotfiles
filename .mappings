@@ -18,10 +18,12 @@
 "term/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
 
 # TMUX
-"tmux/tmux.conf"              = "~/.tmux.conf"
-"tmux/templates/project.yml"  = "~/.tmuxinator/project.yml"
-"tmux/templates/dotfiles.yml" = "~/.tmuxinator/dotfiles.yml"
-"tmux/templates/comms.yml"    = "~/.tmuxinator/comms.yml"
+"tmux/tmux.conf"                = "~/.tmux.conf"
+"tmux/templates/project.yml"    = "~/.tmuxinator/project.yml"
+"tmux/templates/go-project.yml" = "~/.tmuxinator/go-project.yml"
+"tmux/templates/dotfiles.yml"   = "~/.tmuxinator/dotfiles.yml"
+"tmux/templates/comms.yml"      = "~/.tmuxinator/comms.yml"
+"tmux/templates/flex.yml"       = "~/.tmuxinator/flex.yml"
 
 # Ubersicht
 "ubersicht/task.jsx" = "~/Library/Application Support/Übersicht/widgets/task.jsx"
