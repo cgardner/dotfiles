@@ -32,3 +32,8 @@ alias cd="c"
 mdown() {
   pandoc "$1" | w3m -T text/html
 }
+
+realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
