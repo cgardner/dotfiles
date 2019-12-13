@@ -1,12 +1,12 @@
 [general]
 # GIT
-"git/config" = "~/.gitconfig"
+"git/config"                    = "~/.gitconfig"
 "git/template/hooks/commit-msg" = "~/.dotfiles/.git/hooks/commit-msg"
 
 # TASKWARRIOR
 "task/taskrc"          = "~/.taskrc"
 "task/taskhelper.yaml" = "~/.config/taskhelper/taskhelper.yaml"
-"task/hooks/on-exit"         = "~/.task/hooks/on-exit"
+"task/hooks/on-exit"   = "~/.task/hooks/on-exit"
 
 # VIM
 "vim/nviminit.vim"      = "~/.config/nvim/init.vim"
@@ -27,5 +27,5 @@
 "ubersicht/task.jsx" = "~/Library/Application Support/Übersicht/widgets/task.jsx"
 
 # Mutt
-"mutt/muttrc" = "~/.muttrc"
+"mutt/muttrc"  = "~/.muttrc"
 "mutt/mailcap" = "~/.mailcap"
