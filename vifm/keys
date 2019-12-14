@@ -1,12 +1,12 @@
 " vim: filetype=vifm :
-" Sample mappings
-let mapleader=","
 
 " Allow me to not have to press shift to run a command
 nnoremap ; :
 
-map <Leader>a :select /.*/<cr>
+" Select all files
+nnoremap ,a ggVG
 
+" Show/Hide dotfiles
 nnoremap i :set invdotfiles<cr>
 
 " Start shell in current directory
