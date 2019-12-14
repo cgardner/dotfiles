@@ -1,0 +1,3 @@
+" vim: filetype=vifm :
+command show echo %f; read  -n 1 -p "Input Selection:" mainmenuinput
+command trim for i in %f; do convert -trim "$i" "$i"; done

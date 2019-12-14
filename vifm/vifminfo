@@ -1,0 +1,111 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/Users/gardnerc/
+	..
+1576174299
+'b
+	/Users/gardnerc/bin/
+	..
+1576174299
+'h
+	/Users/gardnerc/
+	..
+1576174299
+'z
+	/Users/gardnerc/.config/vifm
+	..
+1576174299
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/Users/gardnerc/Documents/Holy Grail/Drive Flex Architecture
+	..
+0
+d/Users/gardnerc/Documents/Holy Grail
+	Drive Flex Architecture
+2
+d/Users/gardnerc/Documents/Holy Grail/Drive Flex Architecture
+	..
+0
+d/Users/gardnerc/Documents/Holy Grail
+	AWS Services.png
+15
+d/Users/gardnerc/.dotfiles/vim
+	..
+0
+d/Users/gardnerc/.dotfiles
+	vim
+7
+d/Users/gardnerc/.dotfiles/vim
+	coc-settings.json
+3
+d/Users/gardnerc/.dotfiles/vim/plugins
+	..
+0
+d/Users/gardnerc/.dotfiles/vim
+	..
+0
+d/Users/gardnerc/.dotfiles
+	term
+4
+d/Users/gardnerc/.dotfiles/term
+	..
+0
+d/Users/gardnerc/.dotfiles
+	ubersicht
+6
+d/Users/gardnerc/.dotfiles/term
+	..
+0
+d/Users/gardnerc/.dotfiles
+	term
+4
+d
+
+# Right window history (oldest to newest):
+D/Users/gardnerc/Documents/Holy Grail/Drive Flex Architecture
+	Cloud Platform POC.png
+7
+D
+
+# Command line history (oldest to newest):
+::help
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/Users/gardnerc/.local/share/vifm/Trash/000_Drive Flex Architecture
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/Users/gardnerc/.local/share/vifm/Trash/000_Drive Flex Architecture
+	/Users/gardnerc/Documents/Holy Grail/Drive Flex Architecture/Drive Flex Architecture
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0
