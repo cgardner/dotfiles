@@ -36,7 +36,5 @@ include ~/.dotfiles/task/attributes.conf
 include ~/.dotfiles/task/inbox.conf
 include ~/.dotfiles/task/reports.conf
 include ~/.dotfiles/task/urgency.conf
+include ~/.dotfiles/task/context.conf
 
-context.work = +work
-context.home = +home
-context.email = +@email
