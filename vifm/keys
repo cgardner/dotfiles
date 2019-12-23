@@ -6,6 +6,9 @@ nnoremap ; :
 " Select all files
 nnoremap ,a ggVG
 
+" Bulk Rename
+vnoremap e :rename<cr>
+
 " Show/Hide dotfiles
 nnoremap i :set invdotfiles<cr>
 
