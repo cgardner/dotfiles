@@ -44,4 +44,6 @@ Plug 'godlygeek/tabular'
 
 Plug 'pedrohdz/vim-yaml-folds'
 
+Plug 'junegunn/goyo.vim'
+
 call plug#end()

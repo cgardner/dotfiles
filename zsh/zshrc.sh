@@ -1,17 +1,6 @@
 ZSH_ROOT="$HOME/.dotfiles/zsh"
 ZSH_PLUGIN_DIR="$ZSH_ROOT/plugins"
 
-source <(antibody init)
-antibody bundle < $ZSH_ROOT/zsh_plugins.txt
-
-autoload -U compinit
-
-export editor='nvim'
-export EDITOR='nvim'
-
-compinit
-
-
 function load_source() {
   DEBUG=$2
   # DEBUG=true
@@ -43,9 +32,18 @@ function load_dir() {
   done
 }
 
-
 load_dir $ZSH_ROOT/config
 load_dir $ZSH_ROOT/aliases
+
+source <(antibody init)
+antibody bundle < $ZSH_ROOT/zsh_plugins.txt
+
+autoload -U compinit
+
+export editor='nvim'
+export EDITOR='nvim'
+
+compinit
 
 # zsh_lib=(
 #   git
