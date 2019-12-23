@@ -31,6 +31,7 @@ include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-blue-256.theme
 
 # Hide the revision information
 journal.info = off
+journal.time = on
 
 include ~/.dotfiles/task/attributes.conf
 include ~/.dotfiles/task/inbox.conf
