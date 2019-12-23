@@ -65,6 +65,4 @@ load_dir $ZSH_ROOT/aliases
 
 load_source $ZSH_ROOT/keybindings.sh
 load_source $ZSH_ROOT/node.sh
-load_source $ZSH_ROOT/variables.sh
-load_source $ZSH_ROOT/bell.sh
 
