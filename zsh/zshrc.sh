@@ -1,6 +1,3 @@
-PATH="./node_modules/.bin:/usr/local/sbin:/usr/local/bin:$PATH:$HOME/go/bin:$HOME/.cargo/bin"
-PATH="$PATH:$HOME/Library/Python/3.7/bin/"
-
 ZSH_ROOT="$HOME/.dotfiles/zsh"
 ZSH_PLUGIN_DIR="$ZSH_ROOT/plugins"
 
@@ -41,7 +38,7 @@ function load_dir() {
     DEBUG=$2
   fi
 
-  for filename ($(find $LOAD_PATH -name "*.sh")); do
+  for filename ($(find $LOAD_PATH -name "*.sh" | sort)); do
     load_source $filename $DEBUG
   done
 }
