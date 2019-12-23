@@ -25,9 +25,6 @@
 "tmux/templates/comms.yml"      = "~/.tmuxinator/comms.yml"
 "tmux/templates/flex.yml"       = "~/.tmuxinator/flex.yml"
 
-# Ubersicht
-"ubersicht/task.jsx" = "~/Library/Application Support/Übersicht/widgets/task.jsx"
-
 # Mutt
 "mutt/muttrc"  = "~/.muttrc"
 "mutt/mailcap" = "~/.mailcap"
