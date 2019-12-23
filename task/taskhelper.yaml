@@ -17,13 +17,13 @@ northon:
   report: 
     - proj:"1:1 > Northon"
     - talking-points
-robert:
+flex-leaders:
   add:
     - +work 
-    - proj:"1:1 > Robert"
+    - proj:"1:1 > Flex Leadership"
     - priority:L
   report: 
-    - proj:"1:1 > Robert"
+    - proj:"1:1 > Flex Leadership"
     - talking-points
 rethink:
   add:
@@ -33,6 +33,8 @@ rethink:
   report: athena
 taskhelper:
   add: 
+    - proj:"TaskHelper"
+  report: 
     - proj:"TaskHelper"
 amplitude:
   add:
