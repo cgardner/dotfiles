@@ -27,6 +27,7 @@
 "tmux/templates/dotfiles.yml"   = "~/.tmuxinator/dotfiles.yml"
 "tmux/templates/comms.yml"      = "~/.tmuxinator/comms.yml"
 "tmux/templates/flex.yml"       = "~/.tmuxinator/flex.yml"
+"tmux/templates/dashboard.yml"  = "~/.tmuxinator/dashboard.yml"
 
 # Mutt
 "mutt/muttrc"  = "~/.muttrc"
