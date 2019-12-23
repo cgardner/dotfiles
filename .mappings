@@ -14,6 +14,9 @@
 "vim/coc-settings.json" = "~/.config/nvim/coc-settings.json"
 "zsh/zshrc-manager.sh"  = "~/.zshrc"
 
+# VIFM
+"vifm/init" = "~/.config/vifm/vifmrc"
+
 # ALACRITTY
 "term/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
 
