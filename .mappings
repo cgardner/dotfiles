@@ -4,9 +4,10 @@
 "git/template/hooks/commit-msg" = "~/.dotfiles/.git/hooks/commit-msg"
 
 # TASKWARRIOR
-"task/taskrc"          = "~/.taskrc"
-"task/taskhelper.yaml" = "~/.config/taskhelper/taskhelper.yaml"
-"task/hooks/on-exit"   = "~/.task/hooks/on-exit"
+"task/taskrc"                      = "~/.taskrc"
+"task/taskhelper.yaml"             = "~/.config/taskhelper/taskhelper.yaml"
+"task/hooks/on-exit"               = "~/.task/hooks/on-exit"
+"task/hooks/on-modify.timewarrior" = "~/.task/hooks/on-modify.timewarrior"
 
 # VIM
 "vim/nviminit.vim"      = "~/.config/nvim/init.vim"

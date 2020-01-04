@@ -48,7 +48,6 @@ old = json.loads(input_stream.readline().decode("utf-8", errors="replace"))
 new = json.loads(input_stream.readline().decode("utf-8", errors="replace"))
 print(json.dumps(new))
 
-
 def extract_tags_from(json_obj):
     # Extract attributes for use as tags.
     tags = [json_obj['description']]
