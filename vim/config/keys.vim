@@ -57,9 +57,12 @@ nnoremap ; :
 " code folding
 nmap <silent> + za
 
-" Conceal toggle
-nnoremap coe :set <C-R>=&conceallevel ? 'conceallevel=0' : 'conceallevel=3'<CR><CR>
-
 " Jump to Errors
 nnoremap ]l :lnext<CR>
 nnoremap [l :lprevious<CR>
+
+" Jump through the quick fix list
+nnoremap [q :cprev<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
