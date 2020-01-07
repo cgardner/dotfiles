@@ -15,3 +15,5 @@ alias northon="taskhelper northon"
 alias amplitude="taskhelper amplitude"
 alias rethink="taskhelper rethink"
 alias upcoming="t due.before:\"$(date -v "+7d" +"%Y-%m-%d")\""
+
+alias tw="timew"
