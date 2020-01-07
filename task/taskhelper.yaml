@@ -27,7 +27,7 @@ flex-leaders:
     - talking-points
 rethink:
   add:
-    - proj:"Athena > Implementation Re-Think"
+    - proj:"CDK.Athena.Implementation.ReThink"
     - +work
     - +@computer
   report: athena
@@ -55,46 +55,46 @@ northbay:
   add:
     - +work
     - +@computer
-    - proj:"NorthBay"
+    - proj:"CDK.DriveFlex.NorthBay"
   report:
-    - proj:"NorthBay"
+    - proj:"CDK.DriveFlex.NorthBay"
 india:
   add:
-    - proj:"India Trip"
+    - proj:CDK.IndiaTrip
     - +work
     - +@email
   report:
-    - proj:"India Trip"
-    - talking-points
+    - proj:CDK.IndiaTrip
+    - organize
 work:
   add:
     - +work
 monitoring:
   add:
-    - proj:"Monitoring"
+    - proj:"CDK.Monitoring"
     - +work
     - +@computer
   report:
-    - proj:"Monitoring"
+    - proj:"CDK.Monitoring"
 outages:
   add:
-    - proj:"Outages"
+    - proj:"CDK.Outages"
     - +work
     - +@computer
     - pri:H
   report:
-    - proj:"Outages"
+    - proj:"CDK.Outages"
 flex:
   add: 
-    - proj:"Drive Flex"
+    - proj:"CDK.DriveFlex"
     - +work
     - +@computer
   report:
-    - proj:"Outages"
+    - proj:"CDK.DriveFlex"
 ideas:
   add:
     - proj:"Ideas"
     - +work
-    - +someday
+    - +@someday
   report:
     - proj:"Ideas"
