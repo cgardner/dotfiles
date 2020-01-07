@@ -9,6 +9,9 @@
 "task/hooks/on-exit"               = "~/.task/hooks/on-exit"
 "task/hooks/on-modify.timewarrior" = "~/.task/hooks/on-modify.timewarrior"
 
+# TIMEWARRIOR
+"timewarrior/timewarrior.cfg" = "~/.timewarrior/timewarrior.cfg"
+
 # VIM
 "vim/nviminit.vim"      = "~/.config/nvim/init.vim"
 "vim/vimrc.vim"         = "~/.vimrc"
