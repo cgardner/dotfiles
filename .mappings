@@ -20,6 +20,7 @@
 
 # VIFM
 "vifm/init" = "~/.config/vifm/vifmrc"
+"vifm/colors/solarized-dark.vifm" = "~/.config/vifm/colors/solarized-dark.vifm"
 
 # ALACRITTY
 "term/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
