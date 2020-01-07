@@ -40,6 +40,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'hzchirs/vim-material'
+Plug 'lifepillar/vim-solarized8'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'godlygeek/tabular'
