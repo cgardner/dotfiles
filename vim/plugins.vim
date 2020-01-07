@@ -25,6 +25,8 @@ Plug 'xavierchow/vim-sequence-diagram'
 Plug 'neoclide/coc.nvim', {
   \ 'do': 'yarn install --frozen-lockfile'
 \}
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 " Tools
 Plug 'terryma/vim-multiple-cursors'
