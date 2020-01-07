@@ -65,6 +65,11 @@ nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
 
+nnoremap <C-w><Up> <C-w>k
+nnoremap <C-w><Down> <C-w>j
+nnoremap <C-w><Left> <C-w>h
+nnoremap <C-w><Right> <C-w>l
+
 " ------------------------------------------------------------------------------
 
 " Various customization examples
