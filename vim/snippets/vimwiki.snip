@@ -1,0 +1,35 @@
+snippet     plantuml
+abbr        dia
+options     head
+  \`\`\`plantuml
+  @startuml
+  ${0}
+  @enduml
+  \`\`\`
+
+
+snippet     mindmap
+abbr        mm
+options     head
+  @startmindmap
+  * ${1:start}
+  ** ${2:first}
+  @endmindmap
+
+snippet     skinparam
+abbr        skinp
+options     head indent
+  skinparam ${1:component} {
+    FontSize 12
+    FontName Roboto
+    BorderColor white
+    BackgroundColor #82C600
+    BackgroundColor<<DarkGreen>> #509E2F
+    BackgroundColor<<Teal>> #00B2A9
+    BackgroundColor<<Blue>> #009CDE
+    BackgroundColor<<DarkTeal>> #00778B
+    BackgroundColor<<DarkBlue>> #005EB8
+    BackgroundColor<<Burgundy>> #890C58
+  }
+  ${0}
+
