@@ -11,14 +11,8 @@ Plug 'junegunn/fzf.vim'
 " Language and Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-" Markdown
-Plug 'suan/vim-instant-markdown', { 
-	 \ 'for': 'markdown', 
-	 \ 'on': 'npm -g install instant-markdown-d' 
-\}
-
-" Sequence Diagrams
-Plug 'xavierchow/vim-sequence-diagram'
+" Markdown / Diagramming
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Autocomplete
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}

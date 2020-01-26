@@ -6,3 +6,4 @@ for f in split(glob('~/.dotfiles/vim/config/*.vim'), '\n')
   exe 'source' f
 endfor
 
+set concealcursor=nc
