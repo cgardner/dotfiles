@@ -1,11 +1,11 @@
-set background=dark
-colorscheme solarized8
-
-
+" set background=dark
+colorscheme solarized
 
 
 " colorize long lines
-highlight OverLength guibg=#fdf6e3 guifg=#dc322f
-match OverLength /\%81v.*/
+" highlight OverLength guibg=#fdf6e3 guifg=#dc322f
+highlight LineNr guifg=#586e75
+highlight TabLineSel guifg=#586e75
+highlight PmenuSel guifg=#586e75
 
-hi CursorLine term=underline cterm=underline
+" match OverLength /\%81v.*/
