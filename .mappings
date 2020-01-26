@@ -22,7 +22,7 @@
 "zsh/zshrc-manager.sh"  = "~/.zshrc"
 
 # VIFM
-"vifm/init" = "~/.config/vifm/vifmrc"
+"vifm/init"                       = "~/.config/vifm/vifmrc"
 "vifm/colors/solarized-dark.vifm" = "~/.config/vifm/colors/solarized-dark.vifm"
 
 # ALACRITTY
@@ -31,11 +31,13 @@
 # TMUX
 "tmux/tmux.conf"                = "~/.tmux.conf"
 "tmux/templates/project.yml"    = "~/.tmuxinator/project.yml"
+"tmux/templates/generic.yml"    = "~/.tmuxinator/generic.yml"
 "tmux/templates/go-project.yml" = "~/.tmuxinator/go-project.yml"
 "tmux/templates/dotfiles.yml"   = "~/.tmuxinator/dotfiles.yml"
 "tmux/templates/comms.yml"      = "~/.tmuxinator/comms.yml"
 "tmux/templates/flex.yml"       = "~/.tmuxinator/flex.yml"
 "tmux/templates/dashboard.yml"  = "~/.tmuxinator/dashboard.yml"
+"tmux/templates/tasks.yml"      = "~/.tmuxinator/tasks.yml"
 
 # Mutt
 "mutt/muttrc"  = "~/.muttrc"
