@@ -4,10 +4,13 @@
 "git/template/hooks/commit-msg" = "~/.dotfiles/.git/hooks/commit-msg"
 
 # TASKWARRIOR
-"task/taskrc"                      = "~/.taskrc"
-"task/taskhelper.yaml"             = "~/.config/taskhelper/taskhelper.yaml"
-"task/hooks/on-exit"               = "~/.task/hooks/on-exit"
-"task/hooks/on-modify.timewarrior" = "~/.task/hooks/on-modify.timewarrior"
+"task/taskrc"                       = "~/.taskrc"
+"task/taskhelper.yaml"              = "~/.config/taskhelper/taskhelper.yaml"
+"task/hooks/on-exit"                = "~/.task/hooks/on-exit"
+"task/hooks/on-modify.timewarrior"  = "~/.task/hooks/on-modify.timewarrior"
+"task/hooks/on-add.default-project" = "~/.task/hooks/on-add.default-project"
+"task/hooks/on-add.work-tags"       = "~/.task/hooks/on-add.work-tags"
+"task/hooks/on-modify.work-tags"    = "~/.task/hooks/on-modify.work-tags"
 
 # TIMEWARRIOR
 "timewarrior/timewarrior.cfg" = "~/.timewarrior/timewarrior.cfg"
