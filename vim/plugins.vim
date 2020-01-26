@@ -56,6 +56,5 @@ Plug 'pedrohdz/vim-yaml-folds'
 Plug 'junegunn/goyo.vim'
 
 Plug 'vimwiki/vimwiki'
-Plug 'jamessan/vim-gnupg'
 
 call plug#end()
