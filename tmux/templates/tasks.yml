@@ -1,0 +1,58 @@
+# /Users/gardnerc/.tmuxinator/tasks.yml
+
+name: tasks
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Note that the pre and post options have been deprecated and will be replaced by
+# project hooks.
+
+# Project hooks
+# Runs on project start, always
+# on_project_start: command
+# Run on project start, the first time
+# on_project_first_start: command
+# Run on project start, after the first time
+# on_project_restart: command
+# Run on project exit ( detaching from tmux session )
+# on_project_exit: command
+# Run on project stop
+# on_project_stop: command
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: editor
+
+# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+windows:
+  - tasks:
+      layout: bb39,137x36,0,0{97x36,0,0[97x7,0,0,15,97x28,0,8,17],39x36,98,0[39x18,98,0,18,39x17,98,19,19]}
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - while true; do clear && t limit:3 next 2>/dev/null; sleep 10; done
+        - tasksh
+        - while true; do clear && task _projects; sleep 10; done
+        - while true; do clear && task burndown.daily; sleep 10; done
+  - wiki:
+      panes: 
+        - nvim -c VimwikiIndex
+  - terminal:
+      panes:
+        - 
