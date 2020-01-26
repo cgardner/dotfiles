@@ -5,7 +5,7 @@ alias zref="source $HOME/.zshrc"
 alias upgrayedd='brew upgrade && \
   brew cask upgrade && \
   brew cleanup && \
-  nvim -c "PlugUpdate" -c "PlugUpgrade" -c "qa!" && \
+  nvim -c "PlugUpdate" -c "PlugUpgrade" -c "PlugClean" -c "qa!" && \
   npm-check -y -g' 
 
 ## Tmuxinator
