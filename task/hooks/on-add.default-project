@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+process.stdin.on('data', data => {
+  const task = JSON.parse(data);
+  if (!task.hasOwnProperty('project') || task.project === "") {
+    task.project = "Inbox"
+  }
+  console.log(JSON.stringify(task));
+});

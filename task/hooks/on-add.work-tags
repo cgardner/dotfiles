@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+const addWorkTags = require('./lib/addWorkTags')
+
+process.stdin.on('data', data => {
+  const task = addWorkTags(JSON.parse(data));
+  console.log(JSON.stringify(task));
+});

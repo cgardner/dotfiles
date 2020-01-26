@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+const addWorkTags = require("./lib/addWorkTags")
+
+process.stdin.on('data', data => {
+  const changes = data.toString()
+    .split("\n")
+    .filter(item => item.length > 0)
+    .map(item => item.trim())
+    .map(JSON.parse)
+
+  const [, task] = changes;
+
+  console.log(JSON.stringify(addWorkTags(task)));
+});
