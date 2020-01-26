@@ -33,9 +33,9 @@ rethink:
   report: athena
 taskhelper:
   add: 
-    - proj:"TaskHelper"
+    - proj:"CommandLine.TaskHelper"
   report: 
-    - proj:"TaskHelper"
+    - proj:"CommandLine.TaskHelper"
 amplitude:
   add:
     - proj:"Drive Flex > Amplitude" 
