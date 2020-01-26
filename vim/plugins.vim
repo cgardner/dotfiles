@@ -25,8 +25,19 @@ Plug 'xavierchow/vim-sequence-diagram'
 Plug 'neoclide/coc.nvim', {
   \ 'do': 'yarn install --frozen-lockfile'
 \}
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+" Plug 'Shougo/neosnippet.vim'
+" Plug 'Shougo/neosnippet-snippets'
 
 " Tools
 Plug 'terryma/vim-multiple-cursors'

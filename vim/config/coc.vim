@@ -2,7 +2,7 @@
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
+  \ 'coc-neosnippet',
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint',
@@ -12,12 +12,17 @@ let g:coc_global_extensions = [
 
 let g:coc_node_path = "/usr/local/bin/node"
 
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+
 inoremap <silent><expr> <TAB>
 			\ pumvisible() ? "\<C-n>" :
 			\ <SID>check_back_space() ? "\<TAB>" :
 			\ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
+                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " setup shortcut to open config
 function! SetupCommandAbbrs(from, to)
 	exec 'cnoreabbrev <expr> '.a:from
@@ -38,7 +43,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
-" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[c` and `]c` for navigate diagnostics
 " nmap <silent> [c <Plug>(coc-diagnostic-prev)
