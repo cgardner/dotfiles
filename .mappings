@@ -6,10 +6,11 @@
 # TASKWARRIOR
 "task/taskrc"                       = "~/.taskrc"
 "task/taskhelper.yaml"              = "~/.config/taskhelper/taskhelper.yaml"
-"task/hooks/on-exit"                = "~/.task/hooks/on-exit"
 "task/hooks/on-modify.timewarrior"  = "~/.task/hooks/on-modify.timewarrior"
 "task/hooks/on-add.default-project" = "~/.task/hooks/on-add.default-project"
 "task/hooks/on-add.work-tags"       = "~/.task/hooks/on-add.work-tags"
+"task/hooks/on-add.1-on-1"          = "~/.task/hooks/on-add.1-on-1"
+"task/hooks/on-add.athena"          = "~/.task/hooks/on-add.athena"
 "task/hooks/on-modify.work-tags"    = "~/.task/hooks/on-modify.work-tags"
 
 # TIMEWARRIOR
