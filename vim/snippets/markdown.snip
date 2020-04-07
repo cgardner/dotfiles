@@ -24,23 +24,29 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet task "create task" i
-- [ ] ${1:task}
-endsnippet
+snippet task
+  - [ ] ${1:task}
 
-snippet note "create a note" b
-`echo "#"` `date +%Y-%m-%d`
+snippet note
+  `echo "#"` `date +%Y-%m-%d`
 
-`echo "##"` Action Items
+  `echo "##"` Action Items
 
-task
-endsnippet
+  task
 
 snippet interview "Interview Notes" b
-`echo "#"` ${1: Interviewee}
+  `echo "#"` ${1: Interviewee}
 
-Hire?
+  Hire?
 
-${0}
-endsnippet
+  ${0}
 
+
+snippet gherkin
+abbr ghe
+options head
+  \`\`\`gherkin
+  Given
+  When
+  Then
+  \`\`\`

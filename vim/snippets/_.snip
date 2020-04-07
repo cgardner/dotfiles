@@ -24,12 +24,13 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet ddate "insert a date" ibw
-`strftime("%Y-%m-%d")`
-endsnippet
+snippet ddate
+abbr dd
+options head
+	`strftime("%Y-%m-%d")`
 
-snippet thx "Thank You" b
+snippet thx
+options head
 	Thank You,
 	Craig
-endsnippet
 

@@ -22,6 +22,8 @@ options     head indent
   skinparam ${1:component} {
     FontSize 12
     FontName Roboto
+    FontColor white
+    ArrowColor #A7A8AA
     BorderColor white
     BackgroundColor #82C600
     BackgroundColor<<DarkGreen>> #509E2F
@@ -33,3 +35,11 @@ options     head indent
   }
   ${0}
 
+snippet gherkin
+abbr ghe
+options head
+  \`\`\`gherkin
+  Given
+  When
+  Then
+  \`\`\`
