@@ -15,11 +15,18 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+
+" Disable backup files {{{
 set nobackup
 set noswapfile
+set wildignore=*.swp,*.bak
+" }}}
+
+" History {{{
 set history=1000
 set undolevels=1000
-set wildignore=*.swp,*.bak
+" }}}
+
 set title
 set laststatus=2
 
