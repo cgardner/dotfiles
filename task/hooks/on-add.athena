@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+require('./lib/handleStdin.js')((task) => {
+  let tags = task.tags || [];
+
+  if (!tags.includes("rethink")) {
+    return {
+      task,
+    };
+  }
+
+  tags = [...tags.filter(tag => tag !== "rethink"), "work", "@computer"];
+
+  return {
+    task: {
+      ...task,
+      tags,
+      project: "CDK.Athena.Implementation.ReThink"
+    }
+  };
+});
