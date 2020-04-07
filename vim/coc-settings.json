@@ -32,8 +32,5 @@
   "json.enable": true,
 
   "snippets.ultisnips.enable": true,
-  "snippets.ultisnips.directories": [
-    "~/.dotfiles/vim/snippets/",
-    "UltiSnips"
-  ]
+  "snippets.ultisnips.directories": ["~/.dotfiles/vim/snippets/", "UltiSnips"]
 }
