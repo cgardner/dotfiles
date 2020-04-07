@@ -46,7 +46,7 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - irssi --connect=Freenode --password=$(gopass show home/freenode.net | head -n 1)
+        - irssi --connect=Freenode --password=$(gopass show home/irc/freenode.net/cgardner | head -n 1)
   - email: 
       layout: main-vertical
       panes:
