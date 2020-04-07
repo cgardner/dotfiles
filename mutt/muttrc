@@ -2,7 +2,7 @@
 source ~/.dotfiles/mutt/gpg.rc
 
 # use program "pass" to handle and decrypt passwords
-set my_pass = `gopass show home/gmail/mutt`
+set my_pass = `gopass show home/websites/mail.google.com/mutt`
 
 set ssl_starttls = yes
 set ssl_force_tls = yes
