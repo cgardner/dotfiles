@@ -1,60 +1,45 @@
-
 call plug#begin('~/.vim/plugged')
 
-" Fuzzy File Search
-Plug 'junegunn/fzf', { 
-  \ 'dir': '~/.fzf', 
-  \ 'do': './install --all' 
-\}
-Plug 'junegunn/fzf.vim'
+" Colors {{{
+Plug 'altercation/vim-colors-solarized'
+" }}}
 
-" Language and Syntax
+" Fuzzy File Search {{{
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+" }}}
+
+" Language and Syntax {{{
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-" Markdown / Diagramming
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+" }}}
 
-" Autocomplete
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Autocomplete / Snippets {{{
 Plug 'neoclide/coc.nvim', {
-  \ 'do': 'yarn install --frozen-lockfile'
+      \ 'branch': 'release',
+      \ 'do': 'yarn install --frozen-lockfile'
 \}
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
-
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
-" Plug 'Shougo/neosnippet.vim'
-" Plug 'Shougo/neosnippet-snippets'
+" }}}
 
-" Tools
-Plug 'terryma/vim-multiple-cursors'
-Plug 'mattn/emmet-vim'
-Plug 'yegappan/mru'
-
-" pimp my vim
+" pimp my vim {{{
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'hzchirs/vim-material'
-Plug 'lifepillar/vim-solarized8'
-Plug 'altercation/vim-colors-solarized'
-Plug 'ryanoasis/vim-devicons'
+Plug 'vifm/vifm.vim' " File Browser
+Plug 'itchyny/lightline.vim'
+" }}}
 
+" Utilities {{{
 Plug 'godlygeek/tabular'
+" }}}
 
-Plug 'pedrohdz/vim-yaml-folds'
-
-Plug 'junegunn/goyo.vim'
-
+" VimWiki {{{
 Plug 'vimwiki/vimwiki'
+Plug 'tbabej/taskwiki'
+Plug 'iamcco/markdown-preview.nvim', { 
+      \ 'do': 'cd app & yarn install'
+      \}
+Plug 'masukomi/vim-markdown-folding'
+" }}}
 
 call plug#end()
