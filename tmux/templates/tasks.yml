@@ -12,12 +12,14 @@ root: ~/
 # Project hooks
 # Runs on project start, always
 # on_project_start: command
+on_project_start: docker run -d --rm --name=plantuml -p 8080:8080 plantuml/plantuml-server
 # Run on project start, the first time
 # on_project_first_start: command
 # Run on project start, after the first time
 # on_project_restart: command
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
+on_project_exit: docker kill plantuml
 # Run on project stop
 # on_project_stop: command
 
@@ -41,16 +43,16 @@ root: ~/
 
 windows:
   - tasks:
-      layout: bb39,137x36,0,0{97x36,0,0[97x7,0,0,15,97x28,0,8,17],39x36,98,0[39x18,98,0,18,39x17,98,19,19]}
+      layout: 33a7,115x34,0,0{86x34,0,0,18,28x34,87,0[28x17,87,0,19,28x16,87,18,20]}
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - while true; do clear && t limit:3 next 2>/dev/null; sleep 10; done
         - tasksh
         - while true; do clear && task _projects; sleep 10; done
         - while true; do clear && task burndown.daily; sleep 10; done
   - wiki:
+      root: ~/.vimwiki
       panes: 
         - nvim -c VimwikiIndex
   - terminal:
