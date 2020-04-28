@@ -38,9 +38,7 @@ Plug 'vifm/vifm.vim'
 Plug 'godlygeek/tabular'
 " }}}
 
-" VimWiki {{{
-Plug 'vimwiki/vimwiki'
-Plug 'tbabej/taskwiki'
+" Markdown {{{
 Plug 'iamcco/markdown-preview.nvim', { 
       \ 'do': 'cd app & yarn install'
       \}
