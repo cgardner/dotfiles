@@ -1,5 +1,6 @@
-ZSH_ROOT="$HOME/.dotfiles/zsh"
+ZSH_ROOT="$HOME/.dotfiles/sh/zsh"
 ZSH_PLUGIN_DIR="$ZSH_ROOT/plugins"
+GPG_TTY=$(tty)
 
 function load_source() {
   DEBUG=$2
