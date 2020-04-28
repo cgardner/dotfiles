@@ -25,8 +25,13 @@ Plug 'Shougo/neosnippet-snippets'
 " pimp my vim {{{
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'vifm/vifm.vim' " File Browser
 Plug 'itchyny/lightline.vim'
+Plug 'ryanoasis/vim-devicons'
+" }}}
+
+" File Browser {{{
+Plug 'preservim/nerdtree'
+Plug 'vifm/vifm.vim'
 " }}}
 
 " Utilities {{{
