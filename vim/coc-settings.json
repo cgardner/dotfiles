@@ -5,6 +5,7 @@
 
   "diagnostic.displayByAle": true,
 
+  "suggest.noselect": false,
   "suggest.autoTrigger": "always",
   "suggest.maxCompleteItemCount": 20,
 
@@ -29,8 +30,5 @@
     }
   },
 
-  "json.enable": true,
-
-  "snippets.ultisnips.enable": true,
-  "snippets.ultisnips.directories": ["~/.dotfiles/vim/snippets/", "UltiSnips"]
+  "json.enable": true
 }
