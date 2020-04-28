@@ -43,18 +43,15 @@ on_project_exit: docker kill plantuml
 
 windows:
   - tasks:
-      layout: 33a7,115x34,0,0{86x34,0,0,18,28x34,87,0[28x17,87,0,19,28x16,87,18,20]}
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
         - tasksh
-        - while true; do clear && task _projects; sleep 10; done
-        - while true; do clear && task burndown.daily; sleep 10; done
   - wiki:
       root: ~/.vimwiki
       panes: 
-        - nvim -c VimwikiIndex
+        - joplin
   - terminal:
       panes:
         - 
