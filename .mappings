@@ -55,3 +55,8 @@
 "mutt/muttrc"  = "~/.muttrc"
 "mutt/mailcap" = "~/.mailcap"
 # }}}
+
+[macos]
+# Scheduled Tasks {{{
+"macos/LaunchDaemons/com.gardnerc.joplinsync.plist" = "~/Library/LaunchAgents/com.gardnerc.joplinsync.plist"
+# }}}
