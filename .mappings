@@ -1,9 +1,11 @@
+# https://github.com/ubnt-intrepid/dot
 [general]
-# GIT
+# GIT {{{
 "git/config"                    = "~/.gitconfig"
 "git/template/hooks/commit-msg" = "~/.dotfiles/.git/hooks/commit-msg"
+# }}}
 
-# TASKWARRIOR
+# TASKWARRIOR {{{
 "task/taskrc"                       = "~/.taskrc"
 "task/taskhelper.yaml"              = "~/.config/taskhelper/taskhelper.yaml"
 "task/hooks/on-modify.timewarrior"  = "~/.task/hooks/on-modify.timewarrior"
@@ -12,24 +14,32 @@
 "task/hooks/on-add.1-on-1"          = "~/.task/hooks/on-add.1-on-1"
 "task/hooks/on-add.athena"          = "~/.task/hooks/on-add.athena"
 "task/hooks/on-modify.work-tags"    = "~/.task/hooks/on-modify.work-tags"
+# }}}
 
-# TIMEWARRIOR
+# TIMEWARRIOR {{{
 "timewarrior/timewarrior.cfg" = "~/.timewarrior/timewarrior.cfg"
+# }}}
 
-# VIM
+# VIM {{{
 "vim/nviminit.vim"      = "~/.config/nvim/init.vim"
 "vim/vimrc.vim"         = "~/.vimrc"
 "vim/coc-settings.json" = "~/.config/nvim/coc-settings.json"
-"zsh/zshrc-manager.sh"  = "~/.zshrc"
+# }}}
 
-# VIFM
+# Shell Config {{{
+"sh/zsh/zshrc-manager.sh"  = "~/.zshrc"
+# }}}
+
+# VIFM {{{
 "vifm/init"                       = "~/.config/vifm/vifmrc"
 "vifm/colors/solarized-dark.vifm" = "~/.config/vifm/colors/solarized-dark.vifm"
+# }}}
 
-# ALACRITTY
+# ALACRITTY {{{
 "term/alacritty.yml" = "~/.config/alacritty/alacritty.yml"
+# }}}
 
-# TMUX
+# TMUX {{{
 "tmux/tmux.conf"                = "~/.tmux.conf"
 "tmux/templates/project.yml"    = "~/.tmuxinator/project.yml"
 "tmux/templates/generic.yml"    = "~/.tmuxinator/generic.yml"
@@ -39,7 +49,9 @@
 "tmux/templates/flex.yml"       = "~/.tmuxinator/flex.yml"
 "tmux/templates/dashboard.yml"  = "~/.tmuxinator/dashboard.yml"
 "tmux/templates/tasks.yml"      = "~/.tmuxinator/tasks.yml"
+# }}}
 
-# Mutt
+# Mutt {{{
 "mutt/muttrc"  = "~/.muttrc"
 "mutt/mailcap" = "~/.mailcap"
+# }}}
