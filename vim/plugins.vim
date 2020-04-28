@@ -15,9 +15,9 @@ Plug 'w0rp/ale'
 
 " Autocomplete / Snippets {{{
 Plug 'neoclide/coc.nvim', {
-      \ 'branch': 'release',
       \ 'do': 'yarn install --frozen-lockfile'
 \}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 " }}}
