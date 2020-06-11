@@ -1,0 +1,9 @@
+{
+  "name": "taskwarrior-hooks",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3"
+  }
+}

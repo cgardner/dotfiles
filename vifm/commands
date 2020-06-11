@@ -1,3 +1,5 @@
 " vim: filetype=vifm :
 command show echo %f; read  -n 1 -p "Input Selection:" mainmenuinput
 command trim for i in %f; do convert -trim "$i" "$i"; done
+command svgpng for i in %f; do convert -trim -density 300 -font /System/Library/Fonts/Helvetica.ttc "$i" "$(basename $i .svg).png"; done
+

@@ -1,0 +1,2 @@
+edit_mode = "vi"
+path = ["~/.cargo/bin", "/usr/local/bin"]

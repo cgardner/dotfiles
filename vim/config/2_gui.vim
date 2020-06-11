@@ -16,6 +16,7 @@ set smartcase
 set hlsearch
 set incsearch
 
+
 " Disable backup files {{{
 set nobackup
 set noswapfile
@@ -29,6 +30,7 @@ set undolevels=1000
 
 set title
 set laststatus=2
+set noshowmode
 
 set guifont=FuraCode\ Nerd\ Font
 

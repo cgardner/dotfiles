@@ -1,4 +1,4 @@
-
+# vim: foldmethod=marker
 # upgrayedd {{{
 alias upgrayedd='brew upgrade && \
   brew cask upgrade && \
@@ -19,11 +19,12 @@ alias ,gp="goproj"
 
 alias tmk="tmux kill-session -t "
 alias ,tmx="tmk"
+alias ,tml="tmux list-session"
 
 # }}}
 
 # git {{{
-alias g="git"
+alias g="GPG_TTY=$(tty) git"
 alias ,g="git"
 clone() {
   REPO_URL=$1
@@ -34,16 +35,11 @@ clone() {
 # }}}
 
 # Shortcuts {{{
+alias ,d="$HOME/.cargo/bin/dot"
 md() {
   mkdir -p $1
   cd $1
 }
-
-c() {
-  cd $1
-  ls
-}
-alias cd="c"
 # }}}
 
 # Helpers {{{

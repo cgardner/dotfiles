@@ -1,0 +1,10 @@
+default: 
+  number_of_panes: 1
+  commands: 
+    - "nvim"
+    - "zsh"
+tasks:
+  commands:
+    - tasksh
+    - joplin
+

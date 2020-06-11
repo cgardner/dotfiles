@@ -3,7 +3,24 @@ let g:lightline = {
     \ "filetype": "MyFiletype",
     \ "fileformat": "MyFileformat",
   \ },
-  \ "colorscheme": "solarized"
+  \ "colorscheme": "solarized",
+  \ "mode_map": {
+    \ "n" : "N",
+    \ "i" : "I",
+    \ "R" : "R",
+    \ "v" : "V",
+    \ "V" : "VL",
+    \ "\<C-v>": "VB",
+    \ "c" : "C",
+    \ "s" : "S",
+    \ "S" : "SL",
+    \ "\<C-s>": "SB",
+    \ "t": "T",
+  \ },
+  \ "separator": {
+    \ "left": "",
+    \ "right": ""
+  \   }
 \}
 
 function! MyFiletype()

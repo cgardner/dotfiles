@@ -3,7 +3,7 @@
 require('./lib/handleStdin')(task => {
   let tags = task.tags || [];
 
-  const mentors = ['northon', 'greg'];
+  const mentors = ['northon', 'greg', 'sreeni'];
 
   const foundMentors = tags.filter(tag => mentors.includes(tag));
   if (foundMentors.length === 0) {

@@ -1,42 +1,18 @@
-# [Created by task 2.5.1 2/5/2018 06:07:00]
-# Taskwarrior program configuration file.
-# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
-# 'man task-sync' or 'man taskrc'
-
-# Here is an example of entries that use the default, override and blank values
-#   variable=foo   -- By specifying a value, this overrides the default
-#   variable=      -- By specifying no value, this means no default
-#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
-
+# vim: foldmethod=marker
 # Use the command 'task show' to see all defaults and overrides
 
-# Files
+# Config {{{
 data.location=~/.task
-
-# Color theme (uncomment one to use)
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/light-16.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/light-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-16.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-red-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-green-256.theme
-# include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-blue-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-violets-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-yellow-green.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-gray-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/dark-gray-blue-256.theme
-# include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-dark-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-light-256.theme
-#include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/no-color.theme
-
-# Hide the revision information
-journal.info = off
-journal.time = on
-
 calendar.holidays=full
-
 recurrence.confirmation = no
 
+# Hide the revision information {{{
+journal.info = off
+journal.time = on
+# }}}
+# }}}
+
+# Includes {{{
 include ~/.dotfiles/task/attributes.conf
 include ~/.dotfiles/task/inbox.conf
 include ~/.dotfiles/task/reports.conf
@@ -44,3 +20,4 @@ include ~/.dotfiles/task/urgency.conf
 include ~/.dotfiles/task/context.conf
 include ~/.dotfiles/task/sync.conf
 include ~/.dotfiles/task/solarized.theme
+# }}}

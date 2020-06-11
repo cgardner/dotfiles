@@ -34,7 +34,6 @@ function load_dir() {
 }
 
 load_dir $ZSH_ROOT/config
-load_dir $ZSH_ROOT/aliases
 
 source <(antibody init)
 antibody bundle < $ZSH_ROOT/zsh_plugins.txt

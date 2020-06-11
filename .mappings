@@ -6,14 +6,14 @@
 # }}}
 
 # TASKWARRIOR {{{
-"task/taskrc"                       = "~/.taskrc"
-"task/taskhelper.yaml"              = "~/.config/taskhelper/taskhelper.yaml"
-"task/hooks/on-modify.timewarrior"  = "~/.task/hooks/on-modify.timewarrior"
-"task/hooks/on-add.default-project" = "~/.task/hooks/on-add.default-project"
-"task/hooks/on-add.work-tags"       = "~/.task/hooks/on-add.work-tags"
-"task/hooks/on-add.1-on-1"          = "~/.task/hooks/on-add.1-on-1"
-"task/hooks/on-add.athena"          = "~/.task/hooks/on-add.athena"
-"task/hooks/on-modify.work-tags"    = "~/.task/hooks/on-modify.work-tags"
+"task/taskrc"                         = "~/.taskrc"
+"task/hooks/on-modify.ledger"         = "~/.task/hooks/on-modify.ledger"
+"task/hooks/on-add.default-project"   = "~/.task/hooks/on-add.default-project"
+"task/hooks/on-add.work-tags"         = "~/.task/hooks/on-add.work-tags"
+"task/hooks/on-add.1-on-1"            = "~/.task/hooks/on-add.1-on-1"
+"task/hooks/on-add.athena"            = "~/.task/hooks/on-add.athena"
+"task/hooks/on-modify.work-tags"      = "~/.task/hooks/on-modify.work-tags"
+"task/hooks/on-modify.relative-recur" = "~/.task/hooks/on-modify.relative-recur"
 # }}}
 
 # TIMEWARRIOR {{{
@@ -41,6 +41,7 @@
 
 # TMUX {{{
 "tmux/tmux.conf"                = "~/.tmux.conf"
+# Tmuxinator {{{
 "tmux/templates/project.yml"    = "~/.tmuxinator/project.yml"
 "tmux/templates/generic.yml"    = "~/.tmuxinator/generic.yml"
 "tmux/templates/go-project.yml" = "~/.tmuxinator/go-project.yml"
@@ -49,6 +50,10 @@
 "tmux/templates/flex.yml"       = "~/.tmuxinator/flex.yml"
 "tmux/templates/dashboard.yml"  = "~/.tmuxinator/dashboard.yml"
 "tmux/templates/tasks.yml"      = "~/.tmuxinator/tasks.yml"
+# }}}
+# Dmux {{{
+"tmux/dmux/dmux.conf.yaml" = "~/.config/dmux/dmux.conf.yaml"
+# }}}
 # }}}
 
 # Mutt {{{

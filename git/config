@@ -10,6 +10,13 @@
   cl   = clean -fd
   diff = diff --ignore-space-at-eol
 
+# Flow {{{
+  ffs = flow feature start
+  fff = flow feature finish
+  frs = flow release start
+  frf = flow release finish
+# }}}
+
 # Found these from https://github.com/gabebw/dotfiles/blob/master/gitconfig.erb
   st       = status -sb
   lol      = log --graph --all --pretty=format:'%Cred%h%Creset %Cblue%an%Creset: %s -%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative

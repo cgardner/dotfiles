@@ -1,4 +1,23 @@
 let mapleader=","
+" Colemak {{{
+noremap K J
+noremap J K
+
+noremap h k
+noremap j h
+noremap k j
+" }}}
+
+" Disable Arrows {{{
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+" }}}
 
 " Manage vimrc {{{
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -32,21 +51,6 @@ nnoremap <silent> g# g#zz
 " http://vimbits.com/bits/20
 vnoremap < <gv
 vnoremap > >gv
-" }}}
-
-" Moving Lines  {{{
-" http://reefpoints.dockyard.com/2013/09/26/vim-moving-lines-aint-hard.html
-" Normal mode
-nnoremap <M-j> :m .+1<CR>==
-nnoremap <M-k> :m .-2<CR>==
-
-" Insert mode
-inoremap <M-j> <ESC>:m .+1<CR>==gi
-inoremap <M-k> <ESC>:m .-2<CR>==gi
-
-" Visual mode
-vnoremap <M-j> :m '>+1<CR>gv=gv
-vnoremap <M-k> :m '<-2<CR>gv=gv
 " }}}
 
 " Toggle the cursorline highlighting {{{

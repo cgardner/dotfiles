@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+// vim: ft=javascript
+
+const moment = require("moment");
+const { get, has } = require("lodash")
+const fs = require("fs");
+
+process.stdin.on("data", raw => {
+  const [oldTask, newTask] = raw.toString()
+    .split("\n")
+    .filter(item => item.length > 0)
+    .map(item => item.trim())
+    .map(JSON.parse);
+  console.log(JSON.stringify(newTask));
+
+  let startOrStop = "";
+  if (has(newTask, "start") && !has(oldTask, "start")) {
+    startOrStop = "i";
+  } else if ((!has(newTask, "start") || has(newTask, "end")) && has(oldTask, "start")) {
+    startOrStop = "o";
+  }
+  
+  if (startOrStop !== "") {
+    const time = moment().format("YYYY/MM/DD HH:mm:ss")
+    const project = ["PROJECT", get(newTask, "project", "")].filter(i => i.length).join(":");
+    const entry = `${startOrStop} ${time} ${project}
+`;
+    fs.appendFileSync(process.env.TIME_LOG, entry);
+  }
+});
